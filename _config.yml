@@ -1,0 +1,46 @@
+# Site settings
+title: "AI Game Tools Daily"
+description: "Curated AI tools and news for game development"
+baseurl: "/ai-game-tools-daily"
+url: "https://sionsychen.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Categories
+categories:
+  - AI Art Tools
+  - AI Coding
+  - AI Audio
+  - AI Animation
+  - AI Level Design
+  - AI Testing
+  - Industry News
+
+# Exclude
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - _data/

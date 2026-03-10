@@ -1,13 +1,69 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ai-game-tools-daily</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+---
+layout: default
+title: Home
+---
+
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% assign latest_post = sorted_posts.first %}
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="gradient-text">AI Game Tools Daily</span>
+        </h1>
+        <p class="text-lg text-slate-400 mb-6">
+            Curated AI tools and news for game development
+        </p>
+        {% if latest_post %}
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 rounded-full text-slate-300">
+            <span>Latest Update:</span>
+            <time class="font-mono text-indigo-400">{{ latest_post.date | date: "%A, %B %d, %Y" }}</time>
+        </div>
+        {% endif %}
+    </section>
+
+    {% if latest_post %}
+    <!-- Today's Headlines -->
+    <section class="mb-16">
+        <div class="flex items-center gap-2 mb-6">
+            <div class="w-1 h-8 bg-indigo-500 rounded-full"></div>
+            <h2 class="text-2xl font-bold">Today's Headlines</h2>
+        </div>
+
+        <div class="space-y-6">
+            {{ latest_post.content }}
+        </div>
+    </section>
+
+    <!-- Archive Section -->
+    {% assign archive_posts = sorted_posts | slice: 1, 6 %}
+    {% if archive_posts.size > 0 %}
+    <section>
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-2">
+                <div class="w-1 h-8 bg-purple-500 rounded-full"></div>
+                <h2 class="text-2xl font-bold">Recent Archive</h2>
+            </div>
+            <a href="{{ '/archive' | relative_url }}" class="text-indigo-400 hover:text-indigo-300 font-medium">
+                View More &rarr;
+            </a>
+        </div>
+
+        <div class="archive-list">
+            {% for post in archive_posts %}
+            <a href="{{ post.url | relative_url }}" class="archive-item">
+                <span class="font-mono text-slate-400">{{ post.date | date: "%b %d" }}</span>
+                <span class="text-slate-300">{{ post.articles | size }} articles</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+    {% else %}
+    <div class="text-center py-20 text-slate-400">
+        <p class="text-xl mb-4">Coming Soon</p>
+        <p>First daily digest will be published tomorrow!</p>
+    </div>
+    {% endif %}
+</div>

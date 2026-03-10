@@ -1,0 +1,33 @@
+---
+layout: default
+title: Categories
+---
+
+{% assign category_colors = "category-ai-art|category-ai-coding|category-ai-audio|category-ai-animation|category-ai-level-design|category-ai-testing|category-industry-news" | split: "|" %}
+{% assign category_keys = "ai-art|ai-coding|ai-audio|ai-animation|ai-level-design|ai-testing|industry-news" | split: "|" %}
+{% assign category_names = "AI Art Tools|AI Coding|AI Audio|AI Animation|AI Level Design|AI Testing|Industry News" | split: "|" %}
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">
+        <span class="gradient-text">Categories</span>
+    </h1>
+
+    <div class="category-grid">
+        {% for i in (0..6) %}
+        {% assign cat_key = category_keys[i] %}
+        {% assign cat_name = category_names[i] %}
+        {% assign cat_color = category_colors[i] %}
+        {% assign cat_posts = site.posts | where: 'category', cat_key %}
+        
+        <a href="{{ '/' | relative_url }}?category={{ cat_key }}" class="category-card">
+            <div class="category-icon {{ cat_color }}">
+                {{ cat_name | slice: 0 }}
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-slate-100">{{ cat_name }}</h3>
+                <p class="text-sm text-slate-400">{{ cat_posts.size }} articles</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>

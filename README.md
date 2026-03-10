@@ -6,7 +6,7 @@ Curated AI tools and news for game development.
 
 ## Overview
 
-AI Game Tools Daily is a daily digest of AI-powered tools and technologies relevant to game development. The site automatically aggregates content from various sources, categorizes them, and presents them in an easy-to-read format.
+AI Game Tools Daily is a daily digest of AI-powered tools and technologies relevant to game development. Built with Jekyll and automatically deployed to GitHub Pages.
 
 ## Categories
 
@@ -20,32 +20,54 @@ AI Game Tools Daily is a daily digest of AI-powered tools and technologies relev
 
 ## Tech Stack
 
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages
+- **Static Site Generator**: Jekyll
+- **Styling**: Custom CSS (Tailwind-inspired)
+- **Hosting**: GitHub Pages (auto-deploy)
+- **Automation**: Python + OpenClaw Cron
 
 ## Development
 
 ```bash
 # Install dependencies
-npm install
+bundle install
 
 # Start development server
-npm run dev
+bundle exec jekyll serve
 
 # Build for production
-npm run build
+bundle exec jekyll build
 ```
 
 ## Content Pipeline
 
-1. Daily automated scraping via OpenClaw Cron
+1. Daily automated scraping via OpenClaw Cron (weekdays 11:00 GMT+8)
 2. Brave Search API for content discovery
 3. Agent-browser for content extraction
-4. GitHub Actions for auto-deployment
+4. Jekyll builds and deploys automatically on push
 5. Feishu notification for updates
+
+## Project Structure
+
+```
+ai-game-tools-daily/
+├── _config.yml              # Jekyll configuration
+├── _layouts/                # HTML layouts
+│   ├── default.html
+│   └── post.html
+├── _posts/                  # Markdown posts
+│   └── YYYY-MM-DD-daily.md
+├── _data/
+│   └── used_urls.json       # URL deduplication
+├── assets/css/
+│   └── style.css            # Custom styles
+├── scripts/
+│   ├── daily-scraper.py     # Content scraper
+│   └── daily-run.sh         # Run wrapper
+├── index.html               # Homepage
+├── categories.html          # Category listing
+├── archive.html             # Archive page
+└── search.html              # Search page
+```
 
 ## License
 

@@ -1,0 +1,77 @@
+---
+layout: default
+title: Search
+---
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">
+        <span class="gradient-text">Search</span>
+    </h1>
+
+    <!-- Search Input -->
+    <div class="relative mb-8">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search articles, tags, or categories..."
+            class="search-input"
+        />
+    </div>
+
+    <!-- Results -->
+    <div id="search-results" class="space-y-4">
+        <p class="text-slate-400">Start typing to search...</p>
+    </div>
+</div>
+
+<script>
+// Search data
+const searchData = [
+    {% for post in site.posts %}
+    {
+        title: {{ post.title | jsonify }},
+        url: {{ post.url | relative_url | jsonify }},
+        date: {{ post.date | jsonify }},
+        content: {{ post.content | strip_html | strip_newlines | truncate: 500 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+
+const searchInput = document.getElementById('search-input');
+const resultsContainer = document.getElementById('search-results');
+
+searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase().trim();
+    
+    if (query.length === 0) {
+        resultsContainer.innerHTML = '<p class="text-slate-400">Start typing to search...</p>';
+        return;
+    }
+    
+    const results = searchData.filter(item => {
+        return item.title.toLowerCase().includes(query) ||
+               item.content.toLowerCase().includes(query);
+    });
+    
+    if (results.length === 0) {
+        resultsContainer.innerHTML = `<p class="text-slate-400 text-center py-8">No results found for "${query}"</p>`;
+        return;
+    }
+    
+    resultsContainer.innerHTML = `
+        <p class="text-slate-400 mb-4">Found ${results.length} result${results.length !== 1 ? 's' : ''}</p>
+        ${results.map(item => `
+            <a href="${item.url}" class="block p-6 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-indigo-500/50 hover:bg-slate-800 transition-all">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xs text-indigo-400">${item.date}</span>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-100 mb-2">${item.title}</h3>
+                <p class="text-slate-400 text-sm">${item.content.substring(0, 150)}...</p>
+            </a>
+        `).join('')}
+    `;
+});
+</script>

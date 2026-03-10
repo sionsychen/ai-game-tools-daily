@@ -1,0 +1,26 @@
+---
+layout: default
+title: Archive
+---
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">
+        <span class="gradient-text">Archive</span>
+    </h1>
+
+    {% if site.posts.size > 0 %}
+    <div class="archive-list">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="archive-item">
+            <div class="flex items-center gap-4">
+                <span class="font-mono text-slate-500 w-24">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <span class="text-slate-300">{{ post.title }}</span>
+            </div>
+            <span class="text-slate-500 text-sm">{{ post.articles | size }} articles</span>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-slate-400 text-center py-12">No posts yet. Check back soon!</p>
+    {% endif %}
+</div>

@@ -6,64 +6,151 @@ title: Home
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 {% assign latest_post = sorted_posts.first %}
 
-<div class="max-w-4xl mx-auto px-4 py-8">
-    <!-- Hero Section -->
-    <section class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="gradient-text">AI Game Tools Daily</span>
-        </h1>
-        <p class="text-lg text-slate-400 mb-6">
-            Curated AI tools and news for game development
-        </p>
-        {% if latest_post %}
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 rounded-full text-slate-300">
-            <span>Latest Update:</span>
-            <time class="font-mono text-indigo-400">{{ latest_post.date | date: "%A, %B %d, %Y" }}</time>
+<div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+    <!-- Hero Section - Typography Dominant -->
+    <section class="mb-16 md:mb-24">
+        <div class="max-w-3xl">
+            <p class="text-indigo-400 font-medium mb-4 tracking-wide uppercase text-sm">Daily Curated Intelligence</p>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                AI tools for
+                <span class="gradient-text block mt-2">game development</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed">
+                Discover the latest AI-powered tools reshaping how games are built. From generative art to intelligent coding assistants.
+            </p>
+            
+            {% if latest_post %}
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-slate-400 text-sm">Updated {{ latest_post.date | date: "%b %d" }}</span>
+                </div>
+                <a href="#today" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">
+                    See today's picks &darr;
+                </a>
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </section>
 
     {% if latest_post %}
     <!-- Today's Headlines -->
-    <section class="mb-16">
-        <div class="flex items-center gap-2 mb-6">
-            <div class="w-1 h-8 bg-indigo-500 rounded-full"></div>
-            <h2 class="text-2xl font-bold">Today's Headlines</h2>
+    <section id="today" class="mb-20">
+        <div class="flex items-baseline gap-4 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold">Today</h2>
+            <span class="text-slate-500">{{ latest_post.date | date: "%A, %B %d" }}</span>
         </div>
 
         <div class="space-y-6">
-            {{ latest_post.content }}
+            {% assign articles = latest_post.articles %}
+            
+            {% comment %}Featured Article - First one gets prominence{% endcomment %}
+            {% if articles[0] %}
+            <article class="bg-slate-800/60 border border-slate-700 rounded-2xl p-6 md:p-8 mb-6">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium text-white
+                        {% case articles[0].category %}
+                            {% when 'ai-art' %}bg-pink-600
+                            {% when 'ai-coding' %}bg-blue-600
+                            {% when 'ai-audio' %}bg-green-600
+                            {% when 'ai-animation' %}bg-orange-600
+                            {% when 'ai-level-design' %}bg-purple-600
+                            {% when 'ai-testing' %}bg-red-600
+                            {% else %}bg-slate-600
+                        {% endcase %}">
+                        {{ articles[0].category | replace: 'ai-', 'AI ' | replace: '-', ' ' | capitalize }}
+                    </span>
+                    {% for tag in articles[0].tags limit: 2 %}
+                    <span class="text-xs text-slate-500">#{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl font-semibold mb-4 text-slate-100">{{ articles[0].title }}</h3>
+                
+                <p class="text-slate-400 text-lg mb-6 leading-relaxed max-w-3xl">{{ articles[0].summary }}</p>
+                
+                <div class="flex items-center justify-between">
+                    <span class="text-sm text-slate-500">{{ articles[0].sourceName }}</span>
+                    <a href="{{ articles[0].sourceUrl }}" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-colors">
+                        Read article
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            {% endif %}
+            
+            {% comment %}Secondary Articles - Smaller cards{% endcomment %}
+            {% if articles.size > 1 %}
+            <div class="grid md:grid-cols-2 gap-6">
+                {% for article in articles offset: 1 %}
+                <article class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600 transition-colors">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-2 h-2 rounded-full
+                            {% case article.category %}
+                                {% when 'ai-art' %}bg-pink-500
+                                {% when 'ai-coding' %}bg-blue-500
+                                {% when 'ai-audio' %}bg-green-500
+                                {% when 'ai-animation' %}bg-orange-500
+                                {% when 'ai-level-design' %}bg-purple-500
+                                {% when 'ai-testing' %}bg-red-500
+                                {% else %}bg-slate-500
+                            {% endcase %}"></span>
+                        <span class="text-xs text-slate-400 uppercase tracking-wide">{{ article.category | replace: 'ai-', '' | replace: '-', ' ' }}</span>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-3 text-slate-200">{{ article.title }}</h3>
+                    
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">{{ article.summary }}</p>
+                    
+                    <a href="{{ article.sourceUrl }}" target="_blank" rel="noopener noreferrer"
+                       class="text-indigo-400 hover:text-indigo-300 text-sm font-medium inline-flex items-center gap-1">
+                        Read on {{ article.sourceName }}
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
     </section>
 
-    <!-- Archive Section -->
-    {% assign archive_posts = sorted_posts | slice: 1, 6 %}
+    {% comment %}Recent Archive Section{% endcomment %}
+    {% assign archive_posts = sorted_posts | slice: 1, 5 %}
     {% if archive_posts.size > 0 %}
     <section>
         <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-2">
-                <div class="w-1 h-8 bg-purple-500 rounded-full"></div>
-                <h2 class="text-2xl font-bold">Recent Archive</h2>
-            </div>
-            <a href="{{ '/archive' | relative_url }}" class="text-indigo-400 hover:text-indigo-300 font-medium">
-                View More &rarr;
-            </a>
+            <h2 class="text-xl font-semibold text-slate-300">Previous issues</h2>
+            <a href="{{ '/archive' | relative_url }}" class="text-indigo-400 hover:text-indigo-300 text-sm">View all &rarr;</a>
         </div>
 
-        <div class="archive-list">
+        <div class="space-y-3">
             {% for post in archive_posts %}
-            <a href="{{ post.url | relative_url }}" class="archive-item">
-                <span class="font-mono text-slate-400">{{ post.date | date: "%b %d" }}</span>
-                <span class="text-slate-300">{{ post.articles | size }} articles</span>
+            <a href="{{ post.url | relative_url }}" 
+               class="flex items-center justify-between py-4 border-b border-slate-800 hover:border-slate-700 transition-colors group">
+                <div class="flex items-center gap-4">
+                    <span class="font-mono text-sm text-slate-500 w-20">{{ post.date | date: "%b %d" }}</span>
+                    <span class="text-slate-400 group-hover:text-slate-300 transition-colors">{{ post.articles | size }} articles</span>
+                </div>
+                <svg class="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
             </a>
             {% endfor %}
         </div>
     </section>
     {% endif %}
+
     {% else %}
-    <div class="text-center py-20 text-slate-400">
-        <p class="text-xl mb-4">Coming Soon</p>
-        <p>First daily digest will be published tomorrow!</p>
+    <div class="text-center py-20">
+        <p class="text-xl text-slate-400 mb-2">Coming Soon</p>
+        <p class="text-slate-500">First daily digest will be published tomorrow!</p>
     </div>
     {% endif %}
 </div>

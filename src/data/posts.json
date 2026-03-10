@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "posts": [
+    {
+      "date": "2026-03-10",
+      "articles": [
+        {
+          "id": "1",
+          "title": "Unity Muse AI Tools Now Available for General Access",
+          "date": "2026-03-10",
+          "category": "ai-art",
+          "tags": ["Unity", "Muse", "Generative AI"],
+          "sourceUrl": "https://blog.unity.com",
+          "sourceName": "Unity Blog",
+          "summary": "Unity has announced general availability of Unity Muse, their AI-powered creation suite. The toolset includes Muse Sprite for 2D asset generation, Muse Texture for materials, and Muse Chat for documentation assistance."
+        },
+        {
+          "id": "2",
+          "title": "NVIDIA Releases DLSS 3.5 with Ray Reconstruction",
+          "date": "2026-03-10",
+          "category": "ai-animation",
+          "tags": ["NVIDIA", "DLSS", "Rendering"],
+          "sourceUrl": "https://developer.nvidia.com",
+          "sourceName": "NVIDIA Developer",
+          "summary": "NVIDIA's latest DLSS 3.5 introduces Ray Reconstruction, an AI-powered technique that enhances ray-traced image quality while maintaining performance. The technology is being integrated into Unreal Engine 5.4."
+        },
+        {
+          "id": "3",
+          "title": "AI-Powered Procedural Dungeon Generation Tools Compared",
+          "date": "2026-03-10",
+          "category": "ai-level-design",
+          "tags": ["Procedural", "Level Design", "Comparison"],
+          "sourceUrl": "https://gamedeveloper.com",
+          "sourceName": "Game Developer",
+          "summary": "A comprehensive comparison of AI-driven procedural generation tools for dungeon creation, including Dungeon Alchemist, AI Dungeon Generator, and custom GPT-based solutions."
+        }
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "articles": [
+        {
+          "id": "4",
+          "title": "GitHub Copilot X: New Features for Game Development",
+          "date": "2026-03-09",
+          "category": "ai-coding",
+          "tags": ["GitHub", "Copilot", "Coding Assistant"],
+          "sourceUrl": "https://github.blog",
+          "sourceName": "GitHub Blog",
+          "summary": "GitHub Copilot X introduces specialized support for game development workflows, including shader code generation, Unity/Unreal Engine API suggestions, and improved context awareness for game logic."
+        },
+        {
+          "id": "5",
+          "title": "AI Audio Tools for Indie Game Developers: 2025 Guide",
+          "date": "2026-03-09",
+          "category": "ai-audio",
+          "tags": ["Audio", "Indie", "Guide"],
+          "sourceUrl": "https://80.lv",
+          "sourceName": "80 Level",
+          "summary": "A curated list of AI audio generation tools suitable for indie developers, covering sound effects (ElevenLabs, Stable Audio), music generation (Suno, Udio), and voice synthesis options."
+        }
+      ]
+    }
+  ]
+}

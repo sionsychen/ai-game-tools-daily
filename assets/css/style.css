@@ -525,3 +525,126 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--border);
 }
+
+/* ===== Utility Classes for Categories, Archive, Search ===== */
+
+/* Container variants */
+.max-w-4xl { max-width: 56rem; }
+
+/* Padding */
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+
+/* Margin */
+.mb-4 { margin-bottom: 1rem; }
+
+/* Flexbox utilities */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.gap-2 { gap: 0.5rem; }
+
+/* Position */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.left-4 { left: 1rem; }
+.top-1\/2 { top: 50%; }
+.-translate-y-1\/2 { transform: translateY(-50%); }
+
+/* Width/Height */
+.w-5 { width: 1.25rem; }
+.h-5 { height: 1.25rem; }
+.w-24 { width: 6rem; }
+
+/* Block */
+.block { display: block; }
+
+/* Space */
+.space-y-4 > * + * { margin-top: 1rem; }
+
+/* Text alignment */
+.text-center { text-align: center; }
+
+/* Search Input */
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.category-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.category-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Archive List */
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.archive-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.archive-item:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-dark);
+}
+
+/* Category Colors */
+.category-ai-art { background: linear-gradient(135deg, #ec4899, #f472b6); color: white; }
+.category-ai-coding { background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; }
+.category-ai-audio { background: linear-gradient(135deg, #8b5cf6, #a78bfa); color: white; }
+.category-ai-animation { background: linear-gradient(135deg, #f59e0b, #fbbf24); color: white; }
+.category-ai-level-design { background: linear-gradient(135deg, #06b6d4, #22d3ee); color: white; }
+.category-ai-testing { background: linear-gradient(135deg, #ef4444, #f87171); color: white; }
+.category-industry-news { background: linear-gradient(135deg, #64748b, #94a3b8); color: white; }

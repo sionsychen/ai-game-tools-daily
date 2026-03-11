@@ -8,15 +8,23 @@ url: "https://sionsychen.github.io"
 markdown: kramdown
 highlighter: rouge
 
+# GitHub Pages 兼容设置
+theme: minima
+
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
 # Collections
 collections:
   posts:
     output: true
+    permalink: /:year/:month/:day/:title/
 
 # Default values
 defaults:
@@ -43,3 +51,4 @@ exclude:
   - Gemfile.lock
   - scripts/
   - _data/
+  - "*.gemspec"

@@ -4,18 +4,20 @@ title: Search
 ---
 
 <section class="search-page">
-  <h2 class="page-title">🔍 Search</h2>
-  
-  <div class="search-box">
-    <input type="text" id="search-input" placeholder="Search articles..." class="search-input" autocomplete="off">
-  </div>
-  
-  <div id="search-results" class="search-results">
-    <p class="search-hint">Enter keywords to search articles...</p>
-  </div>
-  
-  <div class="back-link-container">
-    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+  <div class="container">
+    <h2 class="page-title">🔍 Search</h2>
+    
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search articles..." class="search-input" autocomplete="off">
+    </div>
+    
+    <div id="search-results" class="search-results">
+      <p class="search-hint">Enter keywords to search articles...</p>
+    </div>
+    
+    <div class="back-link-container">
+      <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+    </div>
   </div>
 </section>
 
@@ -63,8 +65,8 @@ searchInput.addEventListener('input', function() {
   results.forEach(item => {
     html += `
       <a href="${item.url}" class="result-item">
-        <div class="result-date">${item.date.substring(0, 10)}</div>
-        <div class="result-title">${item.title}</div>
+        <span class="result-date">${item.date.substring(0, 10)}</span>
+        <span class="result-title">${item.title}</span>
       </a>
     `;
   });
@@ -76,16 +78,14 @@ searchInput.addEventListener('input', function() {
 
 <style>
 .search-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 0;
 }
 
 .page-title {
   font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--slate-100);
+  margin-bottom: 2rem;
 }
 
 .search-box {
@@ -96,25 +96,29 @@ searchInput.addEventListener('input', function() {
   width: 100%;
   padding: 0.875rem 1rem;
   font-size: 1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--bg-secondary);
-  color: var(--text-primary);
+  border: 1px solid var(--slate-700);
+  border-radius: 0.5rem;
+  background: var(--slate-800);
+  color: var(--slate-100);
 }
 
 .search-input:focus {
   outline: none;
-  border-color: var(--accent);
+  border-color: var(--emerald-500);
+}
+
+.search-input::placeholder {
+  color: var(--slate-500);
 }
 
 .search-hint {
-  color: var(--text-muted);
+  color: var(--slate-400);
   text-align: center;
   padding: 2rem 0;
 }
 
 .results-count {
-  color: var(--text-muted);
+  color: var(--slate-400);
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
@@ -122,36 +126,36 @@ searchInput.addEventListener('input', function() {
 .results-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .result-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  transition: all 0.2s;
+  padding: 1rem 1.25rem;
+  background: var(--slate-800);
+  border: 1px solid var(--slate-700);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .result-item:hover {
-  background: var(--bg-tertiary);
-  border-color: var(--accent-dark);
+  background: var(--slate-700);
+  border-color: var(--emerald-500);
 }
 
 .result-date {
-  font-family: var(--font-mono);
   font-size: 0.875rem;
-  color: var(--accent-light);
+  color: var(--emerald-400);
+  font-weight: 500;
   min-width: 100px;
   flex-shrink: 0;
 }
 
 .result-title {
-  color: var(--text-primary);
+  flex: 1;
+  color: var(--slate-200);
   font-weight: 500;
 }
 
@@ -160,12 +164,12 @@ searchInput.addEventListener('input', function() {
 }
 
 .back-link {
-  color: var(--accent-light);
-  text-decoration: none;
+  color: var(--emerald-400);
   font-weight: 500;
+  transition: color 0.2s;
 }
 
 .back-link:hover {
-  color: var(--accent);
+  color: var(--emerald-300);
 }
 </style>

@@ -4,59 +4,59 @@ title: Categories
 ---
 
 <section class="categories-page">
-  <h2 class="page-title">🏷️ Categories</h2>
-  
-  <div class="category-list">
-    <a href="{{ '/' | relative_url }}" class="category-item">
-      <span class="category-emoji">🎨</span>
-      <div class="category-info">
-        <span class="category-name">AI Art Tools</span>
-        <span class="category-desc">Image generation, textures, materials</span>
-      </div>
-    </a>
+  <div class="container">
+    <h2 class="page-title">🏷️ Categories</h2>
     
-    <a href="{{ '/' | relative_url }}" class="category-item">
-      <span class="category-emoji">💻</span>
-      <div class="category-info">
-        <span class="category-name">AI Coding</span>
-        <span class="category-desc">Code assistants, shaders, scripting</span>
-      </div>
-    </a>
+    <div class="category-list">
+      <a href="{{ '/' | relative_url }}" class="category-item">
+        <span class="category-emoji">🎨</span>
+        <div class="category-info">
+          <span class="category-name">AI Art Tools</span>
+          <span class="category-desc">Image generation, textures, materials</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/' | relative_url }}" class="category-item">
+        <span class="category-emoji">💻</span>
+        <div class="category-info">
+          <span class="category-name">AI Coding</span>
+          <span class="category-desc">Code assistants, shaders, scripting</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/' | relative_url }}" class="category-item">
+        <span class="category-emoji">🔊</span>
+        <div class="category-info">
+          <span class="category-name">AI Audio</span>
+          <span class="category-desc">Sound effects, music, voice synthesis</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/' | relative_url }}" class="category-item">
+        <span class="category-emoji">🎬</span>
+        <div class="category-info">
+          <span class="category-name">AI Animation</span>
+          <span class="category-desc">Motion generation, facial animation</span>
+        </div>
+      </a>
+    </div>
     
-    <a href="{{ '/' | relative_url }}" class="category-item">
-      <span class="category-emoji">🔊</span>
-      <div class="category-info">
-        <span class="category-name">AI Audio</span>
-        <span class="category-desc">Sound effects, music, voice synthesis</span>
-      </div>
-    </a>
-    
-    <a href="{{ '/' | relative_url }}" class="category-item">
-      <span class="category-emoji">🎬</span>
-      <div class="category-info">
-        <span class="category-name">AI Animation</span>
-        <span class="category-desc">Motion generation, facial animation</span>
-      </div>
-    </a>
-  </div>
-  
-  <div class="back-link-container">
-    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+    <div class="back-link-container">
+      <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+    </div>
   </div>
 </section>
 
 <style>
 .categories-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 0;
 }
 
 .page-title {
   font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--slate-100);
+  margin-bottom: 2rem;
 }
 
 .category-list {
@@ -70,16 +70,15 @@ title: Categories
   align-items: center;
   gap: 1rem;
   padding: 1.25rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  transition: all 0.2s;
+  background: var(--slate-800);
+  border: 1px solid var(--slate-700);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .category-item:hover {
-  background: var(--bg-tertiary);
-  border-color: var(--accent-dark);
+  background: var(--slate-700);
+  border-color: var(--emerald-500);
   transform: translateX(4px);
 }
 
@@ -95,13 +94,13 @@ title: Categories
 }
 
 .category-name {
-  color: var(--text-primary);
+  color: var(--slate-100);
   font-weight: 600;
   font-size: 1.1rem;
 }
 
 .category-desc {
-  color: var(--text-muted);
+  color: var(--slate-400);
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
@@ -111,12 +110,12 @@ title: Categories
 }
 
 .back-link {
-  color: var(--accent-light);
-  text-decoration: none;
+  color: var(--emerald-400);
   font-weight: 500;
+  transition: color 0.2s;
 }
 
 .back-link:hover {
-  color: var(--accent);
+  color: var(--emerald-300);
 }
 </style>

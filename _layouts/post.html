@@ -2,17 +2,57 @@
 layout: default
 ---
 
-<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <header class="mb-8">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">{{ page.title }}</h1>
-        <p class="text-slate-400">{{ page.date | date: "%B %d, %Y" }}</p>
+<article class="post-page">
+  <div class="container">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
     </header>
 
     <div class="article-content">
-        {{ content }}
+      {{ content }}
     </div>
 
-    <footer class="mt-12 pt-8 border-t border-slate-800">
-        <a href="{{ '/' | relative_url }}" class="text-indigo-400 hover:text-indigo-300">&larr; Back to Home</a>
+    <footer class="post-footer">
+      <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
     </footer>
+  </div>
 </article>
+
+<style>
+.post-page {
+  padding: 3rem 0;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--slate-100);
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  color: var(--slate-400);
+  font-size: 0.875rem;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--slate-800);
+}
+
+.back-link {
+  color: var(--emerald-400);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--emerald-300);
+}
+</style>

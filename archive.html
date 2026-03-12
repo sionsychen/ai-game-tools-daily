@@ -4,75 +4,80 @@ title: Archive
 ---
 
 <section class="archive-page">
-  <h2 class="page-title">📚 Archive</h2>
-  
-  <div class="archive-list-full">
-    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-    {% for post in sorted_posts %}
-      <div class="archive-item">
-        <div class="archive-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-        <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
-      </div>
-    {% endfor %}
-  </div>
-  
-  <div class="back-link-container">
-    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+  <div class="container">
+    <h2 class="page-title">📚 Archive</h2>
+    
+    <div class="archive-list-full">
+      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+      {% for post in sorted_posts %}
+        <a href="{{ post.url | relative_url }}" class="archive-item">
+          <span class="archive-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="archive-title">{{ post.title }}</span>
+          <svg class="archive-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      {% endfor %}
+    </div>
+    
+    <div class="back-link-container">
+      <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+    </div>
   </div>
 </section>
 
 <style>
 .archive-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 0;
 }
 
 .page-title {
   font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--slate-100);
+  margin-bottom: 2rem;
 }
 
 .archive-list-full {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .archive-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  transition: all 0.2s;
+  padding: 1rem 1.25rem;
+  background: var(--slate-800);
+  border: 1px solid var(--slate-700);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .archive-item:hover {
-  background: var(--bg-tertiary);
-  border-color: var(--accent-dark);
+  background: var(--slate-700);
+  border-color: var(--emerald-500);
 }
 
 .archive-date {
-  font-family: var(--font-mono);
   font-size: 0.875rem;
-  color: var(--accent-light);
+  color: var(--emerald-400);
+  font-weight: 500;
   min-width: 100px;
   flex-shrink: 0;
 }
 
 .archive-title {
-  color: var(--text-primary);
+  flex: 1;
+  color: var(--slate-200);
   font-weight: 500;
-  text-decoration: none;
 }
 
-.archive-title:hover {
-  color: var(--accent-light);
+.archive-arrow {
+  width: 1rem;
+  height: 1rem;
+  color: var(--slate-500);
 }
 
 .back-link-container {
@@ -80,12 +85,12 @@ title: Archive
 }
 
 .back-link {
-  color: var(--accent-light);
-  text-decoration: none;
+  color: var(--emerald-400);
   font-weight: 500;
+  transition: color 0.2s;
 }
 
 .back-link:hover {
-  color: var(--accent);
+  color: var(--emerald-300);
 }
 </style>

@@ -45,10 +45,19 @@ title: Home
       {% assign articles = latest_post.articles %}
       
       {% for article in articles %}
+      {% assign cat = article.category %}
+      {% if cat == 'ai-art' %}{% assign cat_name = 'AI Art' %}
+      {% elsif cat == 'ai-code' %}{% assign cat_name = 'AI Code' %}
+      {% elsif cat == 'ai-audio' %}{% assign cat_name = 'AI Audio' %}
+      {% elsif cat == 'ai-3d' %}{% assign cat_name = 'AI 3D' %}
+      {% elsif cat == 'ai-animation' %}{% assign cat_name = 'AI Animation' %}
+      {% elsif cat == 'ai-tools' %}{% assign cat_name = 'AI Tools' %}
+      {% else %}{% assign cat_name = cat | replace: 'ai-', 'AI ' | replace: '-', ' ' | capitalize %}
+      {% endif %}
       <article class="article-card">
         <div class="article-header">
-          <span class="category-badge category-{{ article.category }}">
-            {{ article.category | replace: 'ai-', 'AI ' | replace: '-', ' ' | capitalize }}
+          <span class="category-badge category-{{ cat }}">
+            {{ cat_name }}
           </span>
         </div>
         

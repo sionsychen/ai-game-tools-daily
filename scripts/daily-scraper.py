@@ -279,11 +279,14 @@ def generate():
         used_urls_today.append(art['url'])
     
     # 生成 front matter（包含所有 articles 数据）
+    def clean_yaml(s):
+        return s.replace('"', '').replace('\n', ' ').strip()
+    
     articles_yaml = "\n".join([f"""  - id: "{a['id']}"
-    title: "{a['title']}"
+    title: "{clean_yaml(a['title'])}"
     category: {a['category']}
     sourceUrl: "{a['sourceUrl']}"
-    summary: "{a['summary']}""" for a in processed_articles])
+    summary: "{clean_yaml(a['summary'])}""" for a in processed_articles])
     
     # 生成正文内容
     body_content = "\n\n---\n\n".join([f"""## {a['title']}

@@ -4,7 +4,7 @@
    ============================================ */
 
 /* ---------- CSS Variables ---------- */
-:root {
+html {
   /* 翠绿配色 - 增强版 */
   --emerald-950: #022c22;
   --emerald-900: #064e3b;
@@ -62,15 +62,16 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, var(--slate-950) 0%, #051a14 50%, var(--slate-950) 100%);
+  background-color: #020617;
+  background-image: 
+    linear-gradient(180deg, #020617 0%, #051a14 50%, #020617 100%),
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16, 185, 129, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 20% 100%, rgba(20, 184, 166, 0.05), transparent);
   background-attachment: fixed;
   color: var(--slate-100);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16, 185, 129, 0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 20% 100%, rgba(20, 184, 166, 0.05), transparent);
 }
 
 a {

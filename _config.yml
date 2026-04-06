@@ -10,6 +10,7 @@ timezone: Asia/Shanghai
 # Build settings
 markdown: kramdown
 highlighter: rouge
+future: true
 
 # Plugins
 plugins:

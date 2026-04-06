@@ -78,27 +78,7 @@ title: Home
   </div>
 </section>
 
-<!-- Recent Archive -->
-<section class="archive-preview">
-  <div class="container">
-    <div class="section-header">
-      <h3 class="section-subtitle" data-i18n="archive.title">Previous Issues</h3>
-      <a href="{{ '/archive' | relative_url }}" class="view-all" data-i18n="archive.viewAll">View all &rarr;</a>
-    </div>
 
-    <div class="archive-list-compact">
-      {% for post in site.posts offset: 1 limit: 5 %}
-      <a href="{{ post.url | relative_url }}" class="archive-item-compact">
-        <span class="archive-date-compact">{{ post.date | date: "%b %d" }}</span>
-        <span class="archive-title-compact">{{ post.articles | size }} articles</span>
-        <svg class="archive-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
 {% else %}
 <!-- Empty State -->
 <section class="empty-state">
@@ -122,8 +102,6 @@ title: Home
       'hero.seeToday': "See today's picks \u2193",
       'today.title': "Today's Headlines",
       'article.readMore': 'Read article',
-      'archive.title': 'Previous Issues',
-      'archive.viewAll': 'View all \u2192',
       'empty.title': 'Coming Soon',
       'empty.subtitle': 'First daily digest will be published shortly.'
     },
@@ -136,8 +114,6 @@ title: Home
       'hero.seeToday': "查看今日精选 \u2193",
       'today.title': '今日头条',
       'article.readMore': '阅读文章',
-      'archive.title': '往期内容',
-      'archive.viewAll': '查看全部 \u2192',
       'empty.title': '即将推出',
       'empty.subtitle': '首期日报即将发布。'
     }

@@ -1,8 +1,11 @@
 # Site settings
 title: "AI Game Tools Daily"
-description: "Curated AI tools and news for game development"
+description: "Curated AI tools and news for game development - Updated April 6, 2026"
 baseurl: "/ai-game-tools-daily"
 url: "https://sionsychen.github.io"
+
+# Timezone
+timezone: Asia/Shanghai
 
 # Build settings
 markdown: kramdown

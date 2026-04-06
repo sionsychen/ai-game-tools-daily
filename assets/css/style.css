@@ -147,6 +147,43 @@ a {
   gap: 0.25rem;
 }
 
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--slate-700);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--slate-400);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: var(--emerald-400);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.lang-btn.active {
+  color: var(--emerald-400);
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.lang-divider {
+  color: var(--slate-600);
+  font-size: 0.75rem;
+}
+
 .nav-link {
   display: flex;
   align-items: center;

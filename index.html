@@ -33,51 +33,6 @@ title: Home
 </section>
 
 {% if latest_post %}
-<!-- Today's Headlines -->
-<section id="today" class="today-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Today's Headlines</h2>
-      <span class="section-date">{{ latest_post.date | date: "%A, %B %d, %Y" }}</span>
-    </div>
-
-    <div class="articles-container">
-      {% assign articles = latest_post.articles %}
-      
-      {% for article in articles %}
-      {% assign cat = article.category %}
-      {% if cat == 'ai-art' %}{% assign cat_name = 'AI Art' %}
-      {% elsif cat == 'ai-code' %}{% assign cat_name = 'AI Code' %}
-      {% elsif cat == 'ai-audio' %}{% assign cat_name = 'AI Audio' %}
-      {% elsif cat == 'ai-3d' %}{% assign cat_name = 'AI 3D' %}
-      {% elsif cat == 'ai-animation' %}{% assign cat_name = 'AI Animation' %}
-      {% elsif cat == 'ai-tools' %}{% assign cat_name = 'AI Tools' %}
-      {% else %}{% assign cat_name = cat | replace: 'ai-', 'AI ' | replace: '-', ' ' | capitalize %}
-      {% endif %}
-      <article class="article-card">
-        <div class="article-header">
-          <span class="category-badge category-{{ cat }}">
-            {{ cat_name }}
-          </span>
-        </div>
-        
-        <h3 class="article-title">{{ article.title }}</h3>
-        <p class="article-summary">{{ article.summary }}</p>
-        
-        <div class="article-footer">
-          <a href="{{ article.sourceUrl }}" target="_blank" class="read-more">
-            Read article
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- Recent Archive -->
 <section class="archive-preview">
   <div class="container">

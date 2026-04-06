@@ -61,7 +61,7 @@ title: Home
           </span>
         </div>
         
-        <h3 class="article-title">{{ article.title }}</h3>
+        <h3 class="article-title" data-title-en="{{ article.title }}" data-title-zh="{{ article.title_zh | default: article.title }}">{{ article.title }}</h3>
         <p class="article-summary" data-summary-en="{{ article.summary }}" data-summary-zh="{{ article.summary_zh | default: article.summary }}">{{ article.summary }}</p>
         
         <div class="article-footer">
@@ -77,7 +77,6 @@ title: Home
     </div>
   </div>
 </section>
-
 
 {% else %}
 <!-- Empty State -->
@@ -141,6 +140,22 @@ title: Home
       const cat = el.className.match(/category-(\w+)/)?.[1];
       if (cat && catNames[lang][cat]) {
         el.textContent = catNames[lang][cat];
+      }
+    });
+    
+    // Update article titles
+    document.querySelectorAll('.article-title').forEach(el => {
+      const title = lang === 'zh' ? el.dataset.titleZh : el.dataset.titleEn;
+      if (title) {
+        el.textContent = title;
+      }
+    });
+    
+    // Update article summaries
+    document.querySelectorAll('.article-summary').forEach(el => {
+      const summary = lang === 'zh' ? el.dataset.summaryZh : el.dataset.summaryEn;
+      if (summary) {
+        el.textContent = summary;
       }
     });
     

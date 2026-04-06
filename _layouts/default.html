@@ -71,8 +71,6 @@
                 'footer.generated': '由 OpenClaw 生成'
             }
         };
-
-        const originalSetLanguage = window.switchLanguage;
         
         window.switchLanguage = function(lang) {
             localStorage.setItem('site-language', lang);
@@ -81,7 +79,7 @@
             // Update nav and footer
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.dataset.i18n;
-                if (navi18n[lang][key]) {
+                if (navi18n[lang] && navi18n[lang][key]) {
                     el.textContent = navi18n[lang][key];
                 }
             });
@@ -92,8 +90,8 @@
             });
             
             // Call page-specific handler if exists
-            if (originalSetLanguage) {
-                originalSetLanguage(lang);
+            if (window.onLanguageChange) {
+                window.onLanguageChange(lang);
             }
         };
 

@@ -5,47 +5,89 @@ title: Categories
 
 <section class="categories-page">
   <div class="container">
-    <h2 class="page-title">🏷️ Categories</h2>
+    <h2 class="page-title" data-i18n="categories.title">🏷️ Categories</h2>
     
     <div class="category-list">
       <a href="{{ '/' | relative_url }}" class="category-item">
         <span class="category-emoji">🎨</span>
         <div class="category-info">
-          <span class="category-name">AI Art Tools</span>
-          <span class="category-desc">Image generation, textures, materials</span>
+          <span class="category-name" data-i18n="categories.aiArt">AI Art Tools</span>
+          <span class="category-desc" data-i18n="categories.aiArtDesc">Image generation, textures, materials</span>
         </div>
       </a>
       
       <a href="{{ '/' | relative_url }}" class="category-item">
         <span class="category-emoji">💻</span>
         <div class="category-info">
-          <span class="category-name">AI Coding</span>
-          <span class="category-desc">Code assistants, shaders, scripting</span>
+          <span class="category-name" data-i18n="categories.aiCode">AI Coding</span>
+          <span class="category-desc" data-i18n="categories.aiCodeDesc">Code assistants, shaders, scripting</span>
         </div>
       </a>
       
       <a href="{{ '/' | relative_url }}" class="category-item">
         <span class="category-emoji">🔊</span>
         <div class="category-info">
-          <span class="category-name">AI Audio</span>
-          <span class="category-desc">Sound effects, music, voice synthesis</span>
+          <span class="category-name" data-i18n="categories.aiAudio">AI Audio</span>
+          <span class="category-desc" data-i18n="categories.aiAudioDesc">Sound effects, music, voice synthesis</span>
         </div>
       </a>
       
       <a href="{{ '/' | relative_url }}" class="category-item">
         <span class="category-emoji">🎬</span>
         <div class="category-info">
-          <span class="category-name">AI Animation</span>
-          <span class="category-desc">Motion generation, facial animation</span>
+          <span class="category-name" data-i18n="categories.aiAnim">AI Animation</span>
+          <span class="category-desc" data-i18n="categories.aiAnimDesc">Motion generation, facial animation</span>
         </div>
       </a>
     </div>
     
     <div class="back-link-container">
-      <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+      <a href="{{ '/' | relative_url }}" class="back-link" data-i18n="common.backHome">← Back to Home</a>
     </div>
   </div>
 </section>
+
+<script>
+// Page-specific i18n for categories page
+(function() {
+  const pageI18n = {
+    en: {
+      'categories.title': '🏷️ Categories',
+      'categories.aiArt': 'AI Art Tools',
+      'categories.aiArtDesc': 'Image generation, textures, materials',
+      'categories.aiCode': 'AI Coding',
+      'categories.aiCodeDesc': 'Code assistants, shaders, scripting',
+      'categories.aiAudio': 'AI Audio',
+      'categories.aiAudioDesc': 'Sound effects, music, voice synthesis',
+      'categories.aiAnim': 'AI Animation',
+      'categories.aiAnimDesc': 'Motion generation, facial animation',
+      'common.backHome': '← Back to Home'
+    },
+    zh: {
+      'categories.title': '🏷️ 文章分类',
+      'categories.aiArt': 'AI 美术工具',
+      'categories.aiArtDesc': '图像生成、纹理、材质',
+      'categories.aiCode': 'AI 编程',
+      'categories.aiCodeDesc': '代码助手、着色器、脚本',
+      'categories.aiAudio': 'AI 音频',
+      'categories.aiAudioDesc': '音效、音乐、语音合成',
+      'categories.aiAnim': 'AI 动画',
+      'categories.aiAnimDesc': '动作生成、面部动画',
+      'common.backHome': '← 返回首页'
+    }
+  };
+
+  // Register page-specific language handler
+  window.onLanguageChange = function(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (pageI18n[lang] && pageI18n[lang][key]) {
+        el.textContent = pageI18n[lang][key];
+      }
+    });
+  };
+})();
+</script>
 
 <style>
 .categories-page {

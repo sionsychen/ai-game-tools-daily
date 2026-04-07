@@ -12,7 +12,7 @@ title: Archive
       {% for post in sorted_posts %}
         <a href="{{ post.url | relative_url }}" class="archive-item">
           <span class="archive-date">{{ post.date | date: "%b %d, %Y" }}</span>
-          <span class="archive-title">{{ post.title }}</span>
+          <span class="archive-title" data-title-en="{{ post.title }}" data-title-zh="{{ post.title_zh | default: post.title }}">{{ post.title }}</span>
           <svg class="archive-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -42,10 +42,20 @@ title: Archive
 
   // Register page-specific language handler
   window.onLanguageChange = function(lang) {
+    // Update static i18n elements
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
       if (pageI18n[lang] && pageI18n[lang][key]) {
         el.textContent = pageI18n[lang][key];
+      }
+    });
+    
+    // Update article titles
+    document.querySelectorAll('[data-title-en][data-title-zh]').forEach(el => {
+      if (lang === 'zh' && el.dataset.titleZh) {
+        el.textContent = el.dataset.titleZh;
+      } else {
+        el.textContent = el.dataset.titleEn;
       }
     });
   };

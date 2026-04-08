@@ -40,8 +40,7 @@ title: Archive
     }
   };
 
-  // Register page-specific language handler
-  window.onLanguageChange = function(lang) {
+  function updateArchivePage(lang) {
     // Update static i18n elements
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
@@ -58,7 +57,21 @@ title: Archive
         el.textContent = el.dataset.titleEn;
       }
     });
-  };
+  }
+
+  // Register handler immediately for default.html to find it
+  window.onLanguageChange = updateArchivePage;
+
+  // Also run on DOM ready to handle cached language
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('site-language') || 'en';
+      updateArchivePage(savedLang);
+    });
+  } else {
+    const savedLang = localStorage.getItem('site-language') || 'en';
+    updateArchivePage(savedLang);
+  }
 })();
 </script>
 

@@ -45,8 +45,8 @@ title: Search
     }
   };
 
-  // Register page-specific language handler
-  window.onLanguageChange = function(lang) {
+  // Update page i18n elements
+  function updatePageI18n(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
       if (pageI18n[lang] && pageI18n[lang][key]) {
@@ -59,7 +59,20 @@ title: Search
         el.placeholder = pageI18n[lang][key];
       }
     });
+  }
+
+  // Register page-specific language handler
+  window.onLanguageChange = function(lang) {
+    updatePageI18n(lang);
+    // Re-render search results with current language
+    if (window.currentSearchQuery !== undefined) {
+      performSearch(window.currentSearchQuery);
+    }
   };
+
+  // Register immediately in case language is already set
+  const currentLang = localStorage.getItem('site-language') || 'en';
+  updatePageI18n(currentLang);
 })();
 
 // Build search data from posts (include both EN and ZH)
@@ -81,6 +94,7 @@ const searchData = [
 
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
+window.currentSearchQuery = '';
 
 function getI18nText(key) {
   const lang = localStorage.getItem('site-language') || 'en';
@@ -106,11 +120,11 @@ function getDisplayTitle(item) {
   return lang === 'zh' && item.title_zh ? item.title_zh : item.title;
 }
 
-searchInput.addEventListener('input', function() {
-  const query = this.value.toLowerCase().trim();
+function performSearch(query) {
+  window.currentSearchQuery = query;
   
   if (query.length === 0) {
-    searchResults.innerHTML = `<p class="search-hint">${getI18nText('search.hint')}</p>`;
+    searchResults.innerHTML = `<p class="search-hint" data-i18n="search.hint">${getI18nText('search.hint')}</p>`;
     return;
   }
   
@@ -145,6 +159,10 @@ searchInput.addEventListener('input', function() {
   
   html += '</div>';
   searchResults.innerHTML = html;
+}
+
+searchInput.addEventListener('input', function() {
+  performSearch(this.value.toLowerCase().trim());
 });
 </script>
 

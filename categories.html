@@ -8,7 +8,7 @@ title: Categories
     <h2 class="page-title" data-i18n="categories.title">🏷️ Categories</h2>
     
     <div class="category-list">
-      <a href="{{ '/' | relative_url }}" class="category-item">
+      <a href="{{ '/?category=ai-art' | relative_url }}" class="category-item" data-category="ai-art">
         <span class="category-emoji">🎨</span>
         <div class="category-info">
           <span class="category-name" data-i18n="categories.aiArt">AI Art Tools</span>
@@ -16,7 +16,7 @@ title: Categories
         </div>
       </a>
       
-      <a href="{{ '/' | relative_url }}" class="category-item">
+      <a href="{{ '/?category=ai-code' | relative_url }}" class="category-item" data-category="ai-code">
         <span class="category-emoji">💻</span>
         <div class="category-info">
           <span class="category-name" data-i18n="categories.aiCode">AI Coding</span>
@@ -24,7 +24,7 @@ title: Categories
         </div>
       </a>
       
-      <a href="{{ '/' | relative_url }}" class="category-item">
+      <a href="{{ '/?category=ai-audio' | relative_url }}" class="category-item" data-category="ai-audio">
         <span class="category-emoji">🔊</span>
         <div class="category-info">
           <span class="category-name" data-i18n="categories.aiAudio">AI Audio</span>
@@ -32,11 +32,43 @@ title: Categories
         </div>
       </a>
       
-      <a href="{{ '/' | relative_url }}" class="category-item">
+      <a href="{{ '/?category=ai-animation' | relative_url }}" class="category-item" data-category="ai-animation">
         <span class="category-emoji">🎬</span>
         <div class="category-info">
           <span class="category-name" data-i18n="categories.aiAnim">AI Animation</span>
           <span class="category-desc" data-i18n="categories.aiAnimDesc">Motion generation, facial animation</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/?category=ai-trends' | relative_url }}" class="category-item" data-category="ai-trends">
+        <span class="category-emoji">📈</span>
+        <div class="category-info">
+          <span class="category-name" data-i18n="categories.aiTrends">AI Trends</span>
+          <span class="category-desc" data-i18n="categories.aiTrendsDesc">Industry reports, market analysis</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/?category=ai-npc' | relative_url }}" class="category-item" data-category="ai-npc">
+        <span class="category-emoji">🤖</span>
+        <div class="category-info">
+          <span class="category-name" data-i18n="categories.aiNpc">AI NPC</span>
+          <span class="category-desc" data-i18n="categories.aiNpcDesc">Character AI, dialogue systems</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/?category=ai-tools' | relative_url }}" class="category-item" data-category="ai-tools">
+        <span class="category-emoji">🛠️</span>
+        <div class="category-info">
+          <span class="category-name" data-i18n="categories.aiTools">AI Tools</span>
+          <span class="category-desc" data-i18n="categories.aiToolsDesc">Development tools, frameworks</span>
+        </div>
+      </a>
+      
+      <a href="{{ '/?category=cloud-gaming' | relative_url }}" class="category-item" data-category="cloud-gaming">
+        <span class="category-emoji">☁️</span>
+        <div class="category-info">
+          <span class="category-name" data-i18n="categories.cloudGaming">Cloud Gaming</span>
+          <span class="category-desc" data-i18n="categories.cloudGamingDesc">Streaming, cloud infrastructure</span>
         </div>
       </a>
     </div>
@@ -61,6 +93,14 @@ title: Categories
       'categories.aiAudioDesc': 'Sound effects, music, voice synthesis',
       'categories.aiAnim': 'AI Animation',
       'categories.aiAnimDesc': 'Motion generation, facial animation',
+      'categories.aiTrends': 'AI Trends',
+      'categories.aiTrendsDesc': 'Industry reports, market analysis',
+      'categories.aiNpc': 'AI NPC',
+      'categories.aiNpcDesc': 'Character AI, dialogue systems',
+      'categories.aiTools': 'AI Tools',
+      'categories.aiToolsDesc': 'Development tools, frameworks',
+      'categories.cloudGaming': 'Cloud Gaming',
+      'categories.cloudGamingDesc': 'Streaming, cloud infrastructure',
       'common.backHome': '← Back to Home'
     },
     zh: {
@@ -73,6 +113,14 @@ title: Categories
       'categories.aiAudioDesc': '音效、音乐、语音合成',
       'categories.aiAnim': 'AI 动画',
       'categories.aiAnimDesc': '动作生成、面部动画',
+      'categories.aiTrends': 'AI 趋势',
+      'categories.aiTrendsDesc': '行业报告、市场分析',
+      'categories.aiNpc': 'AI NPC',
+      'categories.aiNpcDesc': '角色AI、对话系统',
+      'categories.aiTools': 'AI 工具',
+      'categories.aiToolsDesc': '开发工具、框架',
+      'categories.cloudGaming': '云游戏',
+      'categories.cloudGamingDesc': '串流、云基础设施',
       'common.backHome': '← 返回首页'
     }
   };
@@ -116,6 +164,7 @@ title: Categories
   border: 1px solid var(--slate-700);
   border-radius: 0.5rem;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .category-item:hover {

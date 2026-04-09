@@ -159,5 +159,48 @@ title: Home
 
   // Register callback for default.html to call
   window.onLanguageChange = updateHomePageLanguage;
+
+  // Category Filter from URL
+  function applyCategoryFilter() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+    
+    if (category) {
+      const articles = document.querySelectorAll('.article-card');
+      let visibleCount = 0;
+      
+      articles.forEach(article => {
+        const badge = article.querySelector('.category-badge');
+        if (badge && badge.classList.contains('category-' + category)) {
+          article.style.display = '';
+          visibleCount++;
+        } else {
+          article.style.display = 'none';
+        }
+      });
+      
+      // Update section title to show filtered category
+      const sectionTitle = document.querySelector('.section-title');
+      if (sectionTitle && visibleCount > 0) {
+        const catDisplay = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        sectionTitle.textContent = catDisplay + ' Articles';
+        sectionTitle.setAttribute('data-i18n', '');
+      }
+      
+      // Show "clear filter" link
+      const sectionHeader = document.querySelector('.section-header');
+      if (sectionHeader && visibleCount > 0) {
+        const clearLink = document.createElement('a');
+        clearLink.href = '{{ "/" | relative_url }}';
+        clearLink.className = 'clear-filter';
+        clearLink.textContent = '← Show All';
+        clearLink.style.cssText = 'color: var(--emerald-400); font-size: 0.875rem; margin-left: 1rem;';
+        sectionHeader.appendChild(clearLink);
+      }
+    }
+  }
+  
+  // Apply filter on page load
+  document.addEventListener('DOMContentLoaded', applyCategoryFilter);
 })();
 </script>

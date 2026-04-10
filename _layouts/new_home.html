@@ -5,6 +5,18 @@ layout: new_default
 {% assign latest_post = site.posts.first %}
 
 {% if latest_post %}
+
+<!-- Daily Header -->
+<header class="daily-header">
+    <h1 class="daily-title">AI Game Tools Daily {{ latest_post.date | date: "%Y/%m/%d" }}</h1>
+    <div class="daily-meta">
+        <span class="daily-tag">AI Game Tools</span>
+        <span class="daily-tag">Daily Digest</span>
+        <span class="daily-tag">Industry News</span>
+        <span class="daily-date">{{ latest_post.date | date: "%B %d, %Y" }}</span>
+    </div>
+</header>
+
 <!-- Include the latest post content directly -->
 {{ latest_post.content }}
 

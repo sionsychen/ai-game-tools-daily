@@ -52,7 +52,7 @@ cleanup_remote() {
 trap cleanup_remote EXIT
 
 # 提交并推送
-git add _posts/_data/
+git add _posts/ _data/
 git commit -m "Publish daily: ${TODAY}" || true
 git pull origin main --rebase || true
 git push origin main

@@ -29,8 +29,8 @@ if [ -z "$GITHUB_TOKEN" ]; then
     exit 1
 fi
 
-# 检查是否有变更
-if ! git diff --quiet || ! git diff --cached --quiet; then
+# 检查是否有变更（包括untracked文件）
+if [ -n "$(git status --porcelain)" ]; then
     echo "[$DATETIME] Changes detected, proceeding to commit/push" >> "$LOG_FILE"
 else
     echo "[$DATETIME] No changes to publish" >> "$LOG_FILE"

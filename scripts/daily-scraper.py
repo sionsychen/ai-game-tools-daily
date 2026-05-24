@@ -265,11 +265,14 @@ def generate():
         log("未找到文章", "ERROR")
         return False
     
-    # 过滤重复
+    # 过滤重复并限制数量（3-5篇高质量）
     articles = filter_duplicates(articles)
     if not articles:
         log("所有文章已发布过", "WARN")
         return False
+    
+    # 限制为最多5篇
+    articles = articles[:5]
     
     log(f"使用 {len(articles)} 篇新文章")
     

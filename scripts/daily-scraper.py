@@ -197,8 +197,8 @@ def push_to_github(date_str):
     run_git(['config', 'user.name', 'AI Game Tools Daily'], check=False)
     run_git(['config', 'user.email', 'ai-tools@gamedev.tech'], check=False)
     
-    # 设置带Token的remote
-    remote_url = f"https://sionsychen:{GITHUB_TOKEN}@github.com/sionsychen/ai-game-tools-daily.git"
+    # 设置带Token的remote (使用 x-access-token 格式)
+    remote_url = f"https://x-access-token:{GITHUB_TOKEN}@github.com/sionsychen/ai-game-tools-daily.git"
     run_git(['remote', 'set-url', 'origin', remote_url])
     
     try:

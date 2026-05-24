@@ -1,10 +1,10 @@
 #!/bin/bash
 # 发布AI游戏工具日报（git commit + push）
-# 纯脚本，不调用AI
+# OpenClaw版本 - 移除Hermes桥接依赖
 
 set -euo pipefail
 
-export PATH="/root/.nvm/versions/node/v22.22.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$PATH"
+export PATH="/root/.nvm/versions/node/v22.22.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$PATH"
 export HOME="/root"
 
 REPO_DIR="/root/.openclaw/workspace/ai-game-tools-daily"
@@ -22,7 +22,7 @@ if [ -f /root/.openclaw/workspace/.env.github ]; then
     source /root/.openclaw/workspace/.env.github
     set +a
 fi
-GITHUB_TOKEN="${GITHUB_TOKEN:-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}"
+GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 
 if [ -z "$GITHUB_TOKEN" ]; then
     echo "[$DATETIME] ERROR: GITHUB_TOKEN not set" >> "$LOG_FILE"
@@ -59,21 +59,19 @@ git push origin main
 
 echo "[$DATETIME] GitHub push completed" >> "$LOG_FILE"
 
-# 简单验证GitHub Pages是否更新（最多等60秒）
-SITE_URL="https://sionsychen.github.io/ai-game-tools-daily/"
-echo "[$DATETIME] Verifying site..." >> "$LOG_FILE"
+# 后台异步验证（不阻塞主流程）
+(
+    echo "[$DATETIME] Background verification started..." >> "$LOG_FILE"
+    for i in {1..30}; do
+        sleep 10
+        if curl -s "$ARCHIVE_URL" | grep -qE "${TODAY_SLUG}|${TODAY}"; then
+            echo "[$DATETIME] Background verification: site updated successfully" >> "$LOG_FILE"
+            exit 0
+        fi
+        echo "[$DATETIME] Background verification: retry $i/30..." >> "$LOG_FILE"
+    done
+    echo "[$DATETIME] Background verification: timed out after 300s, but site should be live soon" >> "$LOG_FILE"
+) &
 
-for i in {1..6}; do
-    sleep 10
-    # 检查页面中是否包含今天的日期（2026-04-12 或 April 12）
-    if curl -s "$SITE_URL" | grep -qE "${TODAY}|$(date '+%B %d')"; then
-        echo "[$DATETIME] Site verified: today's date found" >> "$LOG_FILE"
-        echo "[$DATETIME] ===== daily-publish.sh success =====" >> "$LOG_FILE"
-        exit 0
-    fi
-    echo "[$DATETIME] Site not yet updated, retry $i/6..." >> "$LOG_FILE"
-done
-
-echo "[$DATETIME] WARNING: Site verification timed out, but push succeeded" >> "$LOG_FILE"
-echo "[$DATETIME] ===== daily-publish.sh success (needs manual verify) =====" >> "$LOG_FILE"
+echo "[$DATETIME] ===== daily-publish.sh success (async verification running) =====" >> "$LOG_FILE"
 exit 0

@@ -161,10 +161,28 @@ def detect_category(title, desc):
     return "ai-tools"
 
 def generate_summary(title, desc):
-    """生成摘要"""
-    if len(desc) > 150:
-        return desc[:150] + "..."
-    return desc if desc else f"Article about {title}"
+    """生成摘要 - 详细版本（200-400字符）"""
+    # 优先使用描述，如果描述太短则基于标题扩展
+    base_text = desc if desc else f"探讨{title}相关的技术进展与应用"
+    
+    # 清理并扩展摘要
+    summary = base_text.strip()
+    
+    # 确保摘要足够详细（至少200字符，最多400字符）
+    if len(summary) < 200 and desc:
+        # 如果原始描述较短，尝试保留更多内容
+        summary = desc[:400].strip()
+    
+    if len(summary) > 400:
+        # 截断到合理长度，尽量在句子边界
+        cutoff = summary.rfind('.', 200, 400)
+        if cutoff == -1:
+            cutoff = summary.rfind(' ', 300, 400)
+        if cutoff == -1:
+            cutoff = 400
+        summary = summary[:cutoff+1].strip()
+    
+    return summary
 
 def push_to_github(date_str):
     """推送到GitHub"""

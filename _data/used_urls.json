@@ -1,132 +1,4 @@
 {
-  "2026-03-10": [
-    "https://blog.unity.com",
-    "https://developer.nvidia.com",
-    "https://gamedeveloper.com"
-  ],
-  "2026-03-12": [
-    "https://www.elsner.com/ai-game-development-tools/",
-    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
-    "https://virtuall.pro/blog/ai-tools-for-game-development",
-    "https://shadhinlab.com/ai-tools-for-game-development/",
-    "https://lumenalta.com/insights/10-essential-ai-game-development-tools"
-  ],
-  "2026-03-13": [
-    "https://www.elsner.com/ai-game-development-tools/",
-    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
-    "https://shadhinlab.com/ai-tools-for-game-development/",
-    "https://ludo.ai/",
-    "https://www.layer.ai/"
-  ],
-  "2026-03-14": [
-    "https://www.elsner.com/ai-game-development-tools/",
-    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
-    "https://shadhinlab.com/ai-tools-for-game-development/",
-    "https://www.layer.ai/",
-    "https://www.scenario.com/"
-  ],
-  "2026-03-15": [
-    "https://www.elsner.com/ai-game-development-tools/",
-    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
-    "https://shadhinlab.com/ai-tools-for-game-development/",
-    "https://www.devopsschool.com/blog/top-10-ai-game-development-tools-in-2025-features-pros-cons-comparison/",
-    "https://www.layer.ai/"
-  ],
-  "2026-03-16": [
-    "https://www.elsner.com/ai-game-development-tools/",
-    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
-    "https://ludo.ai/",
-    "https://www.layer.ai/",
-    "https://www.recraft.ai/generate/game-assets"
-  ],
-  "2026-04-09": [
-    "https://www.hartmanncapital.com/news-insights/genai-in-gaming-industry-report-q1-2025",
-    "https://news.qq.com/rain/a/20250416A07UWB00"
-  ],
-  "2026-04-10": [
-    "https://ziva.sh/blogs/gdc-2026-generative-ai-game-development-data",
-    "https://www.aibusinessreview.org/2026/03/23/gdc-2026-ai-hype-reality-gap-game-development/",
-    "https://thegww.com/how-ai-is-transforming-game-development-in-2026-from-npcs-to-fully-generated-worlds/",
-    "https://www.honogear.com/en/blog/engineering/ai-npcs-gaming-2026"
-  ],
-  "2026-04-11": [
-    "https://www.gianty.com/gdc-2026-report-about-generative-ai/",
-    "https://www.theverge.com/games/897982/gdc-2026-ai-game-developer-conference",
-    "https://news.skrew.ai/ai-dominated-gdc-2026-game-development/",
-    "https://relishgames.com/journal/top-game-development-trends-of-2026/"
-  ],
-  "2026-04-12": [
-    "https://pikorafy.com/blog/nvidia-ace-autonomous-ai-npcs-pubg-inzoi-2026",
-    "https://viz-cad.com/blog/which-ai-3d-generator-actually-works-in-2026",
-    "https://www.sonarworks.com/blog/learn/voice-ai-game-audio-film-sound-designers",
-    "https://www.openaitoolshub.org/en/blog/microsoft-agent-framework-review"
-  ],
-  "2026-04-13": [
-    "https://arstechnica.com/gaming/2026/04/what-is-steamgpt-leaked-files-point-to-ai-powered-valve-security-review-system/",
-    "https://pikorafy.com/blog/unity-ai-prompt-to-game-no-code-2026",
-    "https://news.skrew.ai/voice-ai-2026-complete-stack-whisper-to-speaker/",
-    "https://www.openaitoolshub.org/en/blog/claude-code-memory-large-codebases"
-  ],
-  "2026-04-14": [
-    "https://arstechnica.com/gaming/2026/03/nvidia-ceo-tries-to-explain-why-dlss-5-isnt-just-ai-slop/",
-    "https://arstechnica.com/gaming/2026/03/gamers-react-with-overwhelming-disgust-to-dlss-5s-generative-ai-glow-ups/",
-    "https://arstechnica.com/ai/2026/03/new-vibe-coded-ai-translation-tool-splits-the-video-game-preservation-community/",
-    "https://www.aibusinessreview.org/2026/04/13/kepler-communications-orbital-gpu-cluster-launch/"
-  ],
-  "2026-04-15": [
-    "https://arstechnica.com/ai/2026/04/metas-superintelligence-lab-unveils-its-first-public-model-muse-spark/",
-    "https://arstechnica.com/gaming/2026/04/nvidias-new-app-lets-you-precompile-gaming-shaders-during-machine-idle-time/",
-    "https://www.houdao.com/d/8274-Peking-University-PhD-Builds-AI-Open-World-Elseland-in-49-Days-with-17-Agents-Reshaping-Game-Development",
-    "https://mocaponline.com/blogs/mocap-news/ai-game-animation-tools-2026"
-  ],
-  "2026-04-16": [
-    "https://news.skrew.ai/adobe-agentic-ai-creative-cloud-claude-code/",
-    "https://news.skrew.ai/camera-artist-multi-agent-cinematic-video-generation/",
-    "https://news.skrew.ai/neural-networks-tts-evaluation/",
-    "https://pikorafy.com/blog/ai-anti-cheat-arms-race-2026"
-  ],
-  "2026-04-17": [
-    "https://news.skrew.ai/canva-ai-2-prompt-powered-design-tools/",
-    "https://news.skrew.ai/parcae-looped-language-model-architecture-ucsd-together-ai/",
-    "https://mocaponline.com/blogs/mocap-news/face-capture-game-dev-iphone-arkit-live-link-metahuman",
-    "https://www.openaitoolshub.org/en/blog/claude-code-mcp-persistence-plugin-bin"
-  ],
-  "2026-04-18": [
-    "https://thenextweb.com/news/roblox-ai-assistant-agentic-tools-planning-procedural-models",
-    "https://www.gamesindustry.biz/google-unveils-new-ai-cloud-tools-to-support-game-development",
-    "https://thetechportal.com/2026/04/17/openai-upgrades-codex-with-multi-agent-workflows-and-desktop-app-control-to-challenge-anthropics-claude-code/",
-    "https://theweek.com/culture-life/personal-technology/ai-warping-video-game-industry"
-  ],
-  "2026-04-19": [
-    "https://arstechnica.com/ai/2026/04/metas-ai-spending-spree-is-helping-make-its-quest-headsets-more-expensive/",
-    "https://arstechnica.com/ai/2026/04/meta-spins-up-ai-version-of-mark-zuckerberg-to-engage-with-employees/",
-    "https://news.skrew.ai/ai-listen-before-you-finish-speaking-streaming-speech/",
-    "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/"
-  ],
-  "2026-04-20": [
-    "https://www.engadget.com/gaming/panic-says-the-playdate-catalog-wont-accept-games-made-with-generative-ai-160615022.html",
-    "https://www.gamesindustry.biz/new-research-shows-over-90-of-gamers-find-playing-with-ai-powered-npcs-to-be-enjoyable-and-rewarding",
-    "https://www.rockpapershotgun.com/we-had-this-problem-before-in-the-games-we-created-with-cd-projekt-blood-of-dawnwalker-ceo-defends-use-of-ai-voice-placeholders-to-save-time",
-    "https://www.eurogamer.net/dead-space-creator-glen-schofield-ai"
-  ],
-  "2026-04-21": [
-    "https://www.gamedeveloper.com/production/panic-won-t-release-playdate-titles-that-use-some-forms-of-generative-ai",
-    "https://arstechnica.com/ai/2026/04/deezer-says-44-of-new-music-uploads-are-ai-generated-most-streams-are-fraudulent/",
-    "https://arstechnica.com/ai/2026/04/anthropics-mythos-ai-model-sparks-fears-of-turbocharged-hacking/",
-    "https://arstechnica.com/ai/2026/04/mozilla-launches-thunderbolt-ai-client-with-focus-on-self-hosted-infrastructure/"
-  ],
-  "2026-04-22": [
-    "https://www.gamesindustry.biz/this-is-not-a-sustainable-business-model-why-google-clouds-jack-buser-thinks-ai-can-save-the-games-industry",
-    "https://arstechnica.com/ai/2026/04/adobe-takes-creative-cloud-into-claude-code-esque-territory/",
-    "https://news.skrew.ai/nvidia-nemotron-personas-korean-ai-agents/",
-    "https://news.skrew.ai/iqiyi-ai-content-overhaul-china-netflix/"
-  ],
-  "2026-04-23": [
-    "https://mobilegamer.biz/what-players-dont-realise-is-that-their-favourite-games-right-now-were-already-built-with-ai/",
-    "https://www.gamesindustry.biz/what-place-will-ai-have-in-game-development",
-    "https://www.gamesindustry.biz/generative-ai-in-game-development-navigating-ip-regulation-and-reputation",
-    "https://www.eurogamer.net/the-expanse-osiris-reborn-plays-like-a-mass-effect-like-sci-fi-adventure-in-fine-form-but-its-developers-use-of-ai-raises-some-difficult-questions"
-  ],
   "2026-04-24": [
     "https://www.cnbc.com/2026/04/23/ai-will-change-video-games-morgan-stanley-says-these-stocks-will-win.html",
     "https://www.cnet.com/tech/gaming/generative-ai-gaming-pushback/",
@@ -270,5 +142,17 @@
     "https://www.theverge.com/games/935481/ai-storytelling-game-hidden-door-now-lets-users-make-their-own-universes-to-share",
     "https://www.gamesindustry.biz/the-big-strauss-zelnick-interview-gta-ai-roblox-and-building-the-biggest-entertainment-company-in-the-world",
     "https://arstechnica.com/google/2026/05/google-announces-agent-optimized-gemini-3-5-flash-and-a-do-anything-model-called-omni/"
+  ],
+  "2026-05-23": [
+    "https://www.eurogamer.net/troy-baker-ai-art-doesnt-innovate-interview",
+    "https://www.rockpapershotgun.com/new-assassins-creed-far-cry-and-ghost-recon-games-will-release-by-early-2029-say-ubisoft-whore-also-dumping-cash-into-a-first-playable-generative-ai-experience",
+    "https://www.aiandgames.com/p/generative-design-in-minecraft-in"
+  ],
+  "2026-05-24": [
+    "https://gamedesigning.org/gaming/best-ai-tools-for-game-development-in-2025/",
+    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
+    "https://www.tripo3d.ai/content/en/use-case/the-best-ai-for-game-devs",
+    "https://fgfactory.com/best-ai-tools-for-game-development",
+    "https://www.elsner.com/ai-game-development-tools/"
   ]
 }

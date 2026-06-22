@@ -12,6 +12,10 @@ LOG_FILE="/root/.openclaw/workspace/logs/ai-game-tools-daily.log"
 DATETIME=$(date '+%Y-%m-%d %H:%M:%S')
 TODAY=$(date '+%Y-%m-%d')
 
+# 定义ARCHIVE_URL和TODAY_SLUG
+ARCHIVE_URL="https://sionsychen.github.io/ai-game-tools-daily/"
+TODAY_SLUG=$(echo "$TODAY" | tr '-' '/')
+
 cd "$REPO_DIR"
 
 echo "[$DATETIME] ===== daily-publish.sh start =====" >> "$LOG_FILE"

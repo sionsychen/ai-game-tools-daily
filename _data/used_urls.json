@@ -1,9 +1,362 @@
 {
+  "2026-04-05": [
+    "https://www.tinyash.com/blog/ai-game-development-tools-complete-guide/",
+    "https://aimojo.io/zh-CN/ai-game-generators/"
+  ],
+  "2026-04-07": [
+    "https://aloa.co/ai/comparisons/ai-image-comparison/top-ai-art-tools-game-developers",
+    "https://www.techswill.com/2025/05/22/free-paid-ai-tools-every-game-dev-should-know-in-2025/",
+    "https://www.toolbit.ai/blog/best-ai-coding-tools-copilot-cursor-claude-comparison",
+    "https://gamedevaihub.com/free-ai-art-tools-indie-game-developers/",
+    "https://artificialanalysis.ai/agents/coding"
+  ],
+  "2026-04-08": [
+    "https://gamedevaihub.com/claude-game-development-guide/",
+    "https://gamedevaihub.com/best-ai-pixel-art-generators-for-2d-indie-games/",
+    "https://gamedevaihub.com/best-ai-code-assistants-for-unity-c-sharp-beginners/",
+    "https://www.toolbit.ai/blog/suno-ai-vs-elevenlabs-comparison-and-guide",
+    "https://www.toolbit.ai/blog/best-ai-video-generators-complete-guide"
+  ],
+  "2026-04-09": [
+    "https://www.hartmanncapital.com/news-insights/genai-in-gaming-industry-report-q1-2025",
+    "https://news.qq.com/rain/a/20250416A07UWB00",
+    "https://www.nvidia.com/en-us/geforce/news/pubg-ally-ai-teammate/"
+  ],
+  "2026-04-10": [
+    "https://ziva.sh/blogs/gdc-2026-generative-ai-game-development-data",
+    "https://www.aibusinessreview.org/2026/03/23/gdc-2026-ai-hype-reality-gap-game-development/",
+    "https://thegww.com/how-ai-is-transforming-game-development-in-2026-from-npcs-to-fully-generated-worlds/",
+    "https://www.honogear.com/en/blog/engineering/ai-npcs-gaming-2026"
+  ],
+  "2026-04-11": [
+    "https://www.gianty.com/gdc-2026-report-about-generative-ai/",
+    "https://www.theverge.com/games/897982/gdc-2026-ai-game-developer-conference",
+    "https://news.skrew.ai/ai-dominated-gdc-2026-game-development/",
+    "https://relishgames.com/journal/top-game-development-trends-of-2026/"
+  ],
+  "2026-04-12": [
+    "https://pikorafy.com/blog/nvidia-ace-autonomous-ai-npcs-pubg-inzoi-2026",
+    "https://viz-cad.com/blog/which-ai-3d-generator-actually-works-in-2026",
+    "https://www.sonarworks.com/blog/learn/voice-ai-game-audio-film-sound-designers",
+    "https://www.openaitoolshub.org/en/blog/microsoft-agent-framework-review"
+  ],
+  "2026-04-13": [
+    "https://arstechnica.com/gaming/2026/04/what-is-steamgpt-leaked-files-point-to-ai-powered-valve-security-review-system/",
+    "https://pikorafy.com/blog/unity-ai-prompt-to-game-no-code-2026",
+    "https://news.skrew.ai/voice-ai-2026-complete-stack-whisper-to-speaker/",
+    "https://www.openaitoolshub.org/en/blog/claude-code-memory-large-codebases"
+  ],
+  "2026-04-14": [
+    "https://arstechnica.com/gaming/2026/03/nvidia-ceo-tries-to-explain-why-dlss-5-isnt-just-ai-slop/",
+    "https://arstechnica.com/gaming/2026/03/gamers-react-with-overwhelming-disgust-to-dlss-5s-generative-ai-glow-ups/",
+    "https://arstechnica.com/ai/2026/03/new-vibe-coded-ai-translation-tool-splits-the-video-game-preservation-community/",
+    "https://www.aibusinessreview.org/2026/04/13/kepler-communications-orbital-gpu-cluster-launch/"
+  ],
+  "2026-04-15": [
+    "https://arstechnica.com/ai/2026/04/metas-superintelligence-lab-unveils-its-first-public-model-muse-spark/",
+    "https://arstechnica.com/gaming/2026/04/nvidias-new-app-lets-you-precompile-gaming-shaders-during-machine-idle-time/",
+    "https://www.houdao.com/d/8274-Peking-University-PhD-Builds-AI-Open-World-Elseland-in-49-Days-with-17-Agents-Reshaping-Game-Development",
+    "https://mocaponline.com/blogs/mocap-news/ai-game-animation-tools-2026"
+  ],
+  "2026-04-16": [
+    "https://news.skrew.ai/adobe-agentic-ai-creative-cloud-claude-code/",
+    "https://news.skrew.ai/camera-artist-multi-agent-cinematic-video-generation/",
+    "https://news.skrew.ai/neural-networks-tts-evaluation/",
+    "https://pikorafy.com/blog/ai-anti-cheat-arms-race-2026"
+  ],
+  "2026-04-17": [
+    "https://news.skrew.ai/canva-ai-2-prompt-powered-design-tools/",
+    "https://news.skrew.ai/parcae-looped-language-model-architecture-ucsd-together-ai/",
+    "https://mocaponline.com/blogs/mocap-news/face-capture-game-dev-iphone-arkit-live-link-metahuman",
+    "https://www.openaitoolshub.org/en/blog/claude-code-mcp-persistence-plugin-bin"
+  ],
+  "2026-04-18": [
+    "https://thenextweb.com/news/roblox-ai-assistant-agentic-tools-planning-procedural-models",
+    "https://www.gamesindustry.biz/google-unveils-new-ai-cloud-tools-to-support-game-development",
+    "https://thetechportal.com/2026/04/17/openai-upgrades-codex-with-multi-agent-workflows-and-desktop-app-control-to-challenge-anthropics-claude-code/",
+    "https://theweek.com/culture-life/personal-technology/ai-warping-video-game-industry"
+  ],
+  "2026-04-19": [
+    "https://arstechnica.com/ai/2026/04/metas-ai-spending-spree-is-helping-make-its-quest-headsets-more-expensive/",
+    "https://arstechnica.com/ai/2026/04/meta-spins-up-ai-version-of-mark-zuckerberg-to-engage-with-employees/",
+    "https://news.skrew.ai/ai-listen-before-you-finish-speaking-streaming-speech/",
+    "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/"
+  ],
+  "2026-04-20": [
+    "https://www.engadget.com/gaming/panic-says-the-playdate-catalog-wont-accept-games-made-with-generative-ai-160615022.html",
+    "https://www.gamesindustry.biz/new-research-shows-over-90-of-gamers-find-playing-with-ai-powered-npcs-to-be-enjoyable-and-rewarding",
+    "https://www.rockpapershotgun.com/we-had-this-problem-before-in-the-games-we-created-with-cd-projekt-blood-of-dawnwalker-ceo-defends-use-of-ai-voice-placeholders-to-save-time",
+    "https://www.eurogamer.net/dead-space-creator-glen-schofield-ai"
+  ],
+  "2026-04-21": [
+    "https://www.gamedeveloper.com/production/panic-won-t-release-playdate-titles-that-use-some-forms-of-generative-ai",
+    "https://arstechnica.com/ai/2026/04/deezer-says-44-of-new-music-uploads-are-ai-generated-most-streams-are-fraudulent/",
+    "https://arstechnica.com/ai/2026/04/anthropics-mythos-ai-model-sparks-fears-of-turbocharged-hacking/",
+    "https://arstechnica.com/ai/2026/04/mozilla-launches-thunderbolt-ai-client-with-focus-on-self-hosted-infrastructure/"
+  ],
+  "2026-04-22": [
+    "https://www.gamesindustry.biz/this-is-not-a-sustainable-business-model-why-google-clouds-jack-buser-thinks-ai-can-save-the-games-industry",
+    "https://arstechnica.com/ai/2026/04/adobe-takes-creative-cloud-into-claude-code-esque-territory/",
+    "https://news.skrew.ai/nvidia-nemotron-personas-korean-ai-agents/",
+    "https://news.skrew.ai/iqiyi-ai-content-overhaul-china-netflix/"
+  ],
+  "2026-04-23": [
+    "https://mobilegamer.biz/what-players-dont-realise-is-that-their-favourite-games-right-now-were-already-built-with-ai/",
+    "https://www.gamesindustry.biz/what-place-will-ai-have-in-game-development",
+    "https://www.gamesindustry.biz/generative-ai-in-game-development-navigating-ip-regulation-and-reputation",
+    "https://www.eurogamer.net/the-expanse-osiris-reborn-plays-like-a-mass-effect-like-sci-fi-adventure-in-fine-form-but-its-developers-use-of-ai-raises-some-difficult-questions"
+  ],
+  "2026-04-24": [
+    "https://www.cnbc.com/2026/04/23/ai-will-change-video-games-morgan-stanley-says-these-stocks-will-win.html",
+    "https://www.cnet.com/tech/gaming/generative-ai-gaming-pushback/",
+    "https://restofworld.org/2026/ai-voice-actors-hollywood-dubbing/",
+    "https://pyshine.com/Claude-Code-Game-Studios-AI-Game-Development/"
+  ],
+  "2026-04-25": [
+    "https://joshfonseca.com/blogs/animal-crossing-llm",
+    "https://darkounity.com/blog-post?id=the-impact-of-ai-on-game-dev-jobs-open-to-work-crisis--1774128585922",
+    "https://github.com/maciej-trebacz/tower-of-time-game",
+    "https://franklantz.substack.com/p/why-no-ai-games"
+  ],
+  "2026-04-26": [
+    "https://www.sonarworks.com/blog/research/future-music-production-human-producer-survey-2026",
+    "https://relishgames.com/journal/generative-ai-for-2d-game-art-tools-and-techniques/",
+    "https://ziva.sh/blogs/best-ai-tools-for-godot-game-engine",
+    "https://relishgames.com/journal/ai-generated-music-for-indie-games-top-tools-of-2026/"
+  ],
+  "2026-04-27": [
+    "https://www.pcgamer.com/games/the-elder-scrolls/this-skyrim-mod-that-makes-npcs-ai-chatterboxes-just-got-a-massive-overhaul/",
+    "https://techcrunch.com/2026/04/21/voyage-is-an-ai-rpg-platform-for-creating-custom-gaming-worlds-with-ai-generated-npc-interactions/",
+    "https://www.rockpapershotgun.com/endless-legend-2s-answer-to-the-common-4x-problem-of-goldfish-ai-is-a-cunning-system-of-badges-from-pleasant-to-bully",
+    "https://www.pcgamer.com/software/ai/nvidia-rolls-out-gpt-5-5-based-codex-to-10-000-of-its-employees-who-apparently-all-think-its-mind-blowing-and-life-changing/"
+  ],
+  "2026-04-29": [
+    "https://80.lv/articles/claude-ai-creator-anthropic-joins-blender-development-fund-as-corporate-patron",
+    "https://www.rockpapershotgun.com/garrys-mod-sequel-sbox-is-already-having-to-deal-with-people-using-ai-in-obvious-low-quality-ways-confess-developers-facepunch",
+    "https://www.gamedeveloper.com/business/magic-the-gathering-arena-devs-seek-to-unionise-to-deliver-genai-and-layoff-protections",
+    "https://arstechnica.com/ai/2026/04/github-will-start-charging-copilot-users-based-on-their-actual-ai-usage/"
+  ],
+  "2026-04-30": [
+    "https://ziva.sh/blogs/game-development-cost-trend",
+    "https://pikorafy.com/blog/ai-boom-kills-stormgate-multiplayer-hathora-2026",
+    "https://ziva.sh/blogs/vibe-coding-games",
+    "https://arstechnica.com/ai/2026/04/openai-codex-system-prompt-includes-explicit-directive-to-never-talk-about-goblins/"
+  ],
+  "2026-05-01": [
+    "https://www.gamedeveloper.com/production/gamemaker-incorporates-claude-code-to-enable-ai-assisted-workflows",
+    "https://www.gamedeveloper.com/production/github-copilot-is-pivoting-to-usage-based-billing-because-it-s-currently-unsustainable",
+    "https://www.eurogamer.net/subnautica-2-no-generative-ai",
+    "https://franklantz.substack.com/p/glips"
+  ],
+  "2026-05-03": [
+    "https://www.gamesindustry.biz/roblox-announces-ai-driven-upscaler-called-roblox-reality",
+    "https://80.lv/articles/blender-clarifies-ai-policy-and-amends-anthropic-donation",
+    "https://www.eurogamer.net/007-first-light-dev-not-using-gen-ai-beware-utopia-bond-theme"
+  ],
+  "2026-05-04": [
+    "https://ziva.sh/blogs/ziva-vs-godot-ai",
+    "https://www.pcgamer.com/software/ai/so-47-percent-of-pc-gamer-readers-say-they-dont-use-ai-at-all-but-i-wonder/",
+    "https://arstechnica.com/ai/2026/05/study-ai-models-that-consider-users-feeling-are-more-likely-to-make-errors/",
+    "https://www.pcgamer.com/software/ai/after-days-of-speculation-over-hard-coded-anti-goblin-bias-from-openai-the-company-had-to-release-an-official-memo-on-where-the-goblins-came-from/"
+  ],
+  "2026-05-05": [
+    "https://www.pcgamer.com/software/ai/randy-pitchford-says-gearbox-has-a-firm-no-ai-policy-after-posting-an-ai-generated-image-of-an-ai-working-at-gearbox/",
+    "https://www.rockpapershotgun.com/turning-solitary-ai-dreams-into-a-social-playable-reality-is-the-aim-of-robloxs-new-upscaling-tech-which-will-make-sentient-blobs-photorealistic",
+    "https://www.rockpapershotgun.com/artius-pure-imagination-is-sonic-the-hedgehog-for-art-students-in-a-post-ai-world"
+  ],
+  "2026-05-06": [
+    "https://www.gamesindustry.biz/its-a-totally-crazy-market-the-seismic-impact-of-the-ai-boom-on-video-game-hardware",
+    "https://www.theverge.com/games/924551/microsoft-xbox-ceo-copilot-ai-asha-sharma",
+    "https://www.eurogamer.net/resident-evil-requiem-director-dlss5-grace-got-it-right"
+  ],
+  "2026-05-07": [
+    "https://arstechnica.com/gaming/2026/05/google-deepmind-partners-with-eve-online-for-ai-model-testing/",
+    "https://startupfortune.com/sequoia-just-put-56-million-into-astrocade-to-make-game-creation-a-consumer-activity-and-the-bet-says-more-about-ai-creation-platforms-than-about-gaming/",
+    "https://3dvf.com/fmx-2026-lia-domine-la-30eme-edition/"
+  ],
+  "2026-05-08": [
+    "https://www.msn.com/en-us/news/technology/experimental-open-source-ai-turns-prompts-into-playable-marvel-star-wars-and-harry-potter-games/ar-AA22vC8U",
+    "https://www.pushsquare.com/news/2026/05/nte-is-built-on-human-creativity-dev-to-rework-generative-ai-assets-in-ps5-open-world",
+    "https://www.gamedeveloper.com/business/mobile-dev-mindtail-raises-2m-fund-for-ai-powered-games"
+  ],
+  "2026-05-09": [
+    "https://arstechnica.com/gaming/2026/05/sony-says-efficient-ai-tools-will-lead-to-even-more-games-flooding-the-market/",
+    "https://www.pcgamer.com/software/ai/nvidias-vp-of-deep-learning-says-ai-workers-are-already-far-beyond-the-costs-of-the-employees/",
+    "https://www.creativebloq.com/3d/video-game-design/this-experimental-open-source-ai-turns-prompts-into-playable-marvel-star-wars-and-harry-potter-games"
+  ],
+  "2026-05-10": [
+    "https://www.pcgamer.com/software/ai/sony-interactive-entertainment-chief-says-ai-will-enable-gaming-experiences-like-never-before-and-i-wonder-how-long-are-these-guys-going-to-talk-about-it-before-we-actually-start-seeing-it/",
+    "https://www.eurogamer.net/black-and-white-lionhead-peter-moylneux-retrospective-google-deepmind-gemini-ai",
+    "https://www.pcgamer.com/games/adventure/the-creators-of-1000xresist-are-making-a-game-about-convincing-an-ai-shes-not-a-real-person/"
+  ],
+  "2026-05-11": [
+    "https://www.pcgamer.com/software/ai/roblox-wants-ai-to-make-its-games-photorealistic-but-the-devs-making-those-games-arent-sold-on-the-idea-i-dont-think-that-your-average-player-right-now-wants-to-do-that/",
+    "https://www.eurogamer.net/dragon-quest-creator-thinks-ai-pals-are-not-just-a-convenient-tool-but-a-friend-to-each-individual-player",
+    "https://www.gamedeveloper.com/business/playstation-sees-ai-as-a-powerful-tool-teams-including-naughty-dog-san-diego-studio-already-using-it"
+  ],
+  "2026-05-13": [
+    "https://www.theverge.com/games/928668/i-just-find-ai-to-be-creatively-soulless",
+    "https://www.gamesindustry.biz/sony-maps-out-how-first-party-playstation-studios-are-utilising-ai-tools-during-development",
+    "https://www.pcgamer.com/software/ai/lies-of-p-studio-is-hiring-an-ai-creator-for-future-projects-but-says-the-role-will-not-be-directly-involved-in-the-development-of-the-sequel/",
+    "https://www.pcgamer.com/software/ai/sony-assures-that-ai-is-only-meant-to-augment-artists-capabilities-instead-of-replacing-them-but-it-feels-like-a-slippery-slope/"
+  ],
+  "2026-05-14": [
+    "https://www.pcgamer.com/software/ai/ai-is-creatively-soulless-says-director-of-mass-effect-and-knights-of-the-old-republic-im-just-really-unimpressed-with-it/",
+    "https://techcrunch.com/2026/05/13/origin-lab-raises-8m-to-help-video-game-companies-sell-data-to-world-model-builders/",
+    "https://arstechnica.com/ai/2026/05/anthropic-blames-dystopian-sci-fi-for-training-ai-models-to-act-evil/"
+  ],
+  "2026-05-16": [
+    "https://www.eurogamer.net/party-animals-ai-competition-controversy-apology",
+    "https://www.gamedeveloper.com/business/xbox-appoints-new-leaders-and-ditches-copilot-ai",
+    "https://arstechnica.com/ai/2026/05/anthropics-claude-can-now-dream-sort-of/",
+    "https://arstechnica.com/ai/2026/05/amazon-employees-are-tokenmaxxing-due-to-pressure-to-use-ai-tools/"
+  ],
+  "2026-05-17": [
+    "https://www.pcgamer.com/software/ai/despite-donald-trump-and-jensen-huang-flying-out-to-the-country-china-has-not-yet-approved-the-sale-of-nvidia-ai-chips/",
+    "https://arstechnica.com/tech-policy/2026/05/authors-fight-for-higher-payouts-from-anthropics-1-5b-copyright-settlement/",
+    "https://arstechnica.com/ai/2026/05/claude-codes-product-lead-talks-usage-limits-transparency-and-the-lean-harness/",
+    "https://www.eurogamer.net/valve-steam-machine-512gb-2tb"
+  ],
+  "2026-05-18": [
+    "https://www.eurogamer.net/sony-bandai-namco-generative-ai-initiative",
+    "https://www.rockpapershotgun.com/former-epic-tech-director-announces-the-immense-engine-his-ai-heavy-european-alternative-to-unreal",
+    "https://ziva.sh/blogs/claude-godot",
+    "https://www.rockpapershotgun.com/his-voice-and-delivery-was-human-darkest-dungeon-developers-will-never-ever-use-genai-to-replace-narrator-wayne-june"
+  ],
+  "2026-05-19": [
+    "https://www.pcgamer.com/software/ai/take-twos-ceo-says-ais-not-in-the-business-of-making-hits-datasets-by-their-very-nature-are-backward-looking-but-that-doesnt-mean-ai-cant-be-super-helpful/",
+    "https://www.pcgamer.com/software/ai/the-creator-of-openclaw-used-usd1-300-000-of-openai-tokens-in-30-days-which-is-a-hell-of-a-perk/",
+    "https://www.eurogamer.net/final-fantasy-6-remake-teaser-ai-reaction"
+  ],
+  "2026-05-20": [
+    "https://www.gamesindustry.biz/far-far-west-publisher-says-we-dont-work-with-partners-that-are-relying-on-generative-ai",
+    "https://www.pcgamer.com/software/ai/party-animals-studio-finally-cancels-its-ai-video-contest-and-promises-to-approach-topics-like-this-in-the-future-with-a-much-more-humble-and-cautious-attitude/",
+    "https://arstechnica.com/google/2026/05/googles-synthid-ai-watermarking-tech-is-being-adopted-by-openai-nvidia-and-more/"
+  ],
+  "2026-05-21": [
+    "https://www.pcgamer.com/software/ai/if-engineers-are-becoming-three-or-four-times-more-productive-then-we-just-want-to-do-three-or-four-times-more-stuff-google-deepmind-ceo-reckons-ai-induced-job-cuts-arent-inevitable/",
+    "https://www.gamesindustry.biz/xbox-announces-hire-of-veteran-analyst-matthew-ball-as-chief-strategy-officer-and-ai-and-amazon-veteran-as-cto",
+    "https://www.eurogamer.net/ubisoft-new-assassins-creed-far-cry-ghost-recon-ai-experience",
+    "https://www.eurogamer.net/final-fantasy-creator-generative-ai-backlash"
+  ],
+  "2026-05-22": [
+    "https://www.theverge.com/games/935481/ai-storytelling-game-hidden-door-now-lets-users-make-their-own-universes-to-share",
+    "https://www.gamesindustry.biz/the-big-strauss-zelnick-interview-gta-ai-roblox-and-building-the-biggest-entertainment-company-in-the-world",
+    "https://arstechnica.com/google/2026/05/google-announces-agent-optimized-gemini-3-5-flash-and-a-do-anything-model-called-omni/"
+  ],
+  "2026-05-23": [
+    "https://www.eurogamer.net/troy-baker-ai-art-doesnt-innovate-interview",
+    "https://www.rockpapershotgun.com/new-assassins-creed-far-cry-and-ghost-recon-games-will-release-by-early-2029-say-ubisoft-whore-also-dumping-cash-into-a-first-playable-generative-ai-experience",
+    "https://www.aiandgames.com/p/generative-design-in-minecraft-in"
+  ],
+  "2026-05-24": [
+    "https://gamedesigning.org/gaming/best-ai-tools-for-game-development-in-2025/",
+    "https://www.alpha3d.io/kb/game-development/best-ai-game-generators/",
+    "https://www.tripo3d.ai/content/en/use-case/the-best-ai-for-game-devs",
+    "https://fgfactory.com/best-ai-tools-for-game-development",
+    "https://www.elsner.com/ai-game-development-tools/"
+  ],
+  "2026-05-25": [
+    "https://devtoolpicks.com/blog/cursor-sdk-launch-ai-agents-indie-hackers-2026",
+    "https://programminginsider.com/500-ai-tools-tested-almost-none-are-ready-for-real-game-development/",
+    "https://www.invenglobal.com/articles/21982/applications-open-for-2026-game-development-ai-transformation-ax-support-program",
+    "https://www.khaleejtimes.com/business/innovation-city/gamings-tiktok-era-has-officially-begun-with-ai"
+  ],
+  "2026-05-26": [
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/ubisoft-reportedly-testing-generative-ai-in-far-cry-7-as-company-posts-record-1-3-billion-loss",
+    "https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/"
+  ],
+  "2026-05-28": [
+    "https://thenextweb.com/news/sparq-85m-seed-a16z-scout-ras-al-khaimah",
+    "https://www.musicbusinessworldwide.com/stability-ai-launches-new-audio-models-that-can-generate-6-minute-music-tracks/",
+    "https://pasqualepillitteri.it/en/news/3392/github-copilot-cursor-claude-code-ai-coding-showdown-2026"
+  ],
+  "2026-05-29": [
+    "https://attractmo.de/ai-business/hoyoverse-plans-14-6-billion-ai-investment",
+    "https://gamebastion.com/n/gdc-trends-report-2026-as-use-of-generative/512916",
+    "https://themagicrain.com/2026/05/global-game-jam-announces-microgrant-pilot-program-supporting-indie-studios-and-emerging-game-talent/"
+  ],
+  "2026-05-31": [
+    "https://respawn.outlookindia.com/gaming/gaming-news/gdc-2026-report-co-development-ai-gaming-industry-evolution",
+    "https://www.pocketgamer.biz/hoyoverse-reportedly-investing-up-to-147bn-in-ai-over-next-three-years/"
+  ],
+  "2026-06-01": [
+    "https://virus.hr/en/news/the-creators-of-genshin-impact-and-honkai-star-rail-want-to-build-their-own-ai-ecosystem-for-game-development-automation-and-more-advanced-npc-systems",
+    "https://www.nme.com/features/gaming-features/video-game-music-2026-interview-austin-wintory-lena-raine-ai-vinyl-3947766",
+    "https://www.unite.ai/best-ai-game-generators/"
+  ],
+  "2026-06-02": [
+    "https://www.gamesindustry.biz/hoyoverse-to-invest-up-to-146bn-in-ai-for-in-house-tools",
+    "https://www.gamesindustry.biz/gdc-trends-report-2026-as-use-of-generative-ai-rises-devs-face-infrastructure-problem",
+    "https://koreagamedesk.com/solo-game-developer-ships-diablo-like-indie-game-using-ai/",
+    "https://www.cultr.com/news/is-ai-changing-how-we-experience-music-and-podcasts-in-games/"
+  ],
+  "2026-06-03": [
+    "https://www.artificialintelligence-news.com/news/ai-in-video-game-development/"
+  ],
+  "2026-06-04": [
+    "https://boardgamewire.com/index.php/2026/06/03/board-the-startup-making-a-400-board-game-console-leans-into-ai-after-raising-another-20m/"
+  ],
+  "2026-06-05": [
+    "https://blog.pixai.art/en/meet-pixai-v4-0-preview/"
+  ],
+  "2026-06-07": [
+    "https://github.com/IvanMurzak/Unity-MCP",
+    "https://www.globenewswire.com/news-release/2026/06/04/3307011/0/en/DAZ-3D-Launches-Daz-Studio-6-the-Next-Generation-of-Its-Flagship-3D-Creation-Platform.html"
+  ],
+  "2026-06-08": [
+    "https://wccftech.com/tomb-raider-legacy-of-atlantis-gen-ai-tools-used-in-development/",
+    "https://gameinformer.com/2026/06/07/sega-confirms-and-responds-to-generative-ai-content-in-new-crazy-taxi-game"
+  ],
+  "2026-06-09": [
+    "https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html",
+    "https://www.summerengine.com/blog/best-ai-for-godot",
+    "https://www.aitooldiscovery.com/guides/best-ai-game-maker"
+  ],
+  "2026-06-10": [
+    "https://www.shacknews.com/article/149450/xbox-asha-sharma-ai-new-category-wont-replace-aaa-games",
+    "https://www.ingamenews.com/2026/06/crazy-taxi-world-tour-development.html",
+    "https://codingfleet.com/blog/best-ai-models-game-development-2026/",
+    "https://www.summerengine.com/blog/best-ai-game-makers-2026",
+    "https://aivexify.com/10-best-ai-npc-conversation-systems/"
+  ],
+  "2026-06-11": [
+    "https://www.timeextension.com/news/2026/06/this-is-from-zelda-if-you-didnt-know-test-footage-highlights-the-danger-of-using-genai-in-video-game-development",
+    "https://www.player.one/gen-atlas-trailer-reveals-human-made-game-design-approach-amid-ai-trend-summer-game-fest-2026-163305",
+    "https://www.summerengine.com/blog/best-ai-tools-for-godot",
+    "https://www.summerengine.com/blog/ai-2d-game-asset-generator"
+  ],
+  "2026-06-12": [
+    "https://www.eurogamer.net/crazy-taxi-world-tour-officially-announced-sega-immediately-upsets-everyone-by-announcing-it-used-generative-ai",
+    "https://www.pocketgamer.biz/apple-unveils-ai-frameworks-and-agentic-coding-tools-in-xcode-27/",
+    "https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/",
+    "https://devtoolpicks.com/blog/openai-codex-sites-launch-indie-hackers-2026"
+  ],
+  "2026-06-13": [
+    "https://www.theshortcut.com/p/anthropic-releases-claude-fable-5-an-ai-model-that-can-build-playable-video-games-from-a-single-prompt",
+    "https://pulse2.com/breaking-change-raises-more-than-1-million-to-advance-ai-powered-game-systems-platform/amp/",
+    "https://techgenyz.com/gen-atlas-no-generative-ai-fumito-ueda/"
+  ],
+  "2026-06-14": [
+    "https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/",
+    "https://cryptobriefing.com/sandbox-ai-game-engine-studio-launch/",
+    "https://www.finsmes.com/2026/06/breaking-change-raises-over-1m-in-funding.html",
+    "https://www.eurogamer.net/tomb-raider-legacy-of-atlantis-ai-use-explained"
+  ],
+  "2026-06-15": [
+    "https://www.apple.com/newsroom/2026/06/apple-aids-app-development-with-new-intelligence-frameworks-and-advanced-tools/",
+    "https://www.digitaltoday.co.kr/en/view/62019/anthropics-claude-fable-5-sets-new-benchmark-from-game-building-to-12-hour-runs",
+    "https://www.mimicgaming.com/post/ai-npc-pipeline-for-games"
+  ],
+  "2026-06-16": [
+    "https://www.efficientlyconnected.com/run-platform-ai-game-creator-launch/",
+    "https://www.rockpapershotgun.com/theres-nothing-worse-than-an-ai-generated-pitch-bloober-jagex-11-bit-and-indie-devs-on-the-bruising-hurdle-of-funding-a-videogame-prototype",
+    "https://myhostnews.com/ai-in-games-from-living-npcs-to-fully-generated-games-where-are-we-really-going-in-2026/"
+  ],
   "2026-06-18": [
     "https://www.pcguide.com/news/nearly-20-of-steams-new-next-fest-games-come-with-a-generative-ai-warning-stats-reveal/",
-    "https://www.theshortcut.com/p/anthropic-releases-claude-fable-5-an-ai-model-that-can-build-playable-video-games-from-a-single-prompt",
-    "https://www.pocketgamer.biz/apple-unveils-ai-frameworks-and-agentic-coding-tools-in-xcode-27/",
-    "https://gameinformer.com/sgf-2026/2026/06/08/crazy-taxi-world-tour-producer-clarifies-ai-use"
+    "https://gameinformer.com/sgf-2026/2026/06/08/crazy-taxi-world-tour-producer-clarifies-ai-use",
+    "https://robloxguimaker.dev/"
   ],
   "2026-06-19": [
     "https://www.vaasblock.com/news/microsoft-xbox-layoffs-ai-game-development-2026/",
@@ -11,23 +364,11 @@
     "https://www.engadget.com/2195840/around-a-fifth-of-steam-next-fest-demos-have-a-generative-ai-disclosure/"
   ],
   "2026-06-20": [
-    "https://www.needsomefun.net/claude-fable-5-how-anthropics-ai-is-changing-video-game-creation/",
-    "https://www.pcguide.com/news/nearly-20-of-steams-new-next-fest-games-come-with-a-generative-ai-warning-stats-reveal/",
-    "https://www.vaasblock.com/news/microsoft-xbox-layoffs-ai-game-development-2026/",
-    "https://www.tweaktown.com/news/112257/nvidia-launches-ace-game-agent-sdk-beta-for-in-game-ai-companions-that-run-on-rtx-gpus/index.html",
-    "https://www.pocketgamer.biz/apple-unveils-ai-frameworks-and-agentic-coding-tools-in-xcode-27/"
-  ],
-  "2026-06-21": [
-    "https://www.gamesindustry.biz/as-ai-costs-rise-theres-little-evidence-of-major-utility-in-game-development-opinion",
-    "https://www.levelup.com/en/news/developer-grows-tired-of-waiting-for-gta-vi-builds-ai-powered-rockstar-clone-instead/",
-    "https://betakit.com/meet-the-father-son-duo-hoping-to-turn-their-ai-side-project-into-a-gaming-company/",
-    "https://www.tech-critter.com/local-ai-companions-npcs-unreal-engine/"
+    "https://www.needsomefun.net/claude-fable-5-how-anthropics-ai-is-changing-video-game-creation/"
   ],
   "2026-06-22": [
-    "https://www.tweaktown.com/news/112257/nvidia-launches-ace-game-agent-sdk-beta-for-in-game-ai-companions-that-run-on-rtx-gpus/index.html",
     "https://www.eurogamer.net/steam-next-fest-generative-ai-disclosure-thousands",
-    "https://appleinsider.com/articles/26/06/17/apples-ai-agents-in-xcode-27-make-vibe-coding-easier",
-    "https://www.needsomefun.net/claude-fable-5-how-anthropics-ai-is-changing-video-game-creation/"
+    "https://appleinsider.com/articles/26/06/17/apples-ai-agents-in-xcode-27-make-vibe-coding-easier"
   ],
   "2026-06-23": [
     "https://www.shacknews.com/article/149725/sony-ai-playstation-evolution",
@@ -35,14 +376,7 @@
     "https://www.dexerto.com/gta/this-dev-is-making-gta-6-with-ai-and-wants-it-released-before-rockstar-3376673/",
     "https://medium.com/@greekofai/meshy-ai-review-2026-the-ai-tool-that-creates-game-ready-3d-models-in-under-60-seconds-192129b81725"
   ],
-  "2026-06-24": [
-    "https://www.tweaktown.com/news/112257/nvidia-launches-ace-game-agent-sdk-beta-for-in-game-ai-companions-that-run-on-rtx-gpus/index.html",
-    "https://medium.com/data-science-in-your-pocket/meshy-ai-3d-generator-review-2026-the-complete-production-workflow-tested-272df212c925",
-    "https://www.techtimes.com/articles/318748/20260620/steam-next-fest-last-call-4931-free-demos-disappear-monday-before-summer-sale.htm",
-    "https://relishgames.com/journal/ai-tools-for-game-developers-the-2026-edition/"
-  ],
   "2026-06-25": [
-    "https://www.dexerto.com/gta/this-dev-is-making-gta-6-with-ai-and-wants-it-released-before-rockstar-3376673/",
     "https://www.gamesindustry.biz/as-ai-costs-rise-theres-little-evidence-of-major-utility-in-game-development-opinion",
     "https://www.tech-critter.com/local-ai-companions-npcs-unreal-engine/",
     "https://betakit.com/meet-the-father-son-duo-hoping-to-turn-their-ai-side-project-into-a-gaming-company/"
@@ -50,12 +384,9 @@
   "2026-06-26": [
     "https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins/",
     "https://www.cosmicjs.com/blog/claude-fable-5-what-it-is-what-it-means-for-developers",
-    "https://www.videogameschronicle.com/news/sony-lays-out-its-ai-plan-for-playstation-we-believe-ai-will-unleash-the-creativity-of-our-studios/",
-    "https://www.engadget.com/2195840/around-a-fifth-of-steam-next-fest-demos-have-a-generative-ai-disclosure/",
-    "https://www.gamesindustry.biz/as-ai-costs-rise-theres-little-evidence-of-major-utility-in-game-development-opinion"
+    "https://www.videogameschronicle.com/news/sony-lays-out-its-ai-plan-for-playstation-we-believe-ai-will-unleash-the-creativity-of-our-studios/"
   ],
   "2026-06-27": [
-    "https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins/",
     "https://inkration.com/ai-art-tools-for-game-studios-in-2026-what-actually-works-for-production/",
     "https://www.ghettosmurfgaming.com/ai-in-gaming-2026-good-or-bad/",
     "https://www.summerengine.com/blog/ai-tools-for-game-design"
@@ -65,25 +396,6 @@
     "https://www.tweaktown.com/news/112315/cd-projekt-red-ceo-warns-that-ai-generated-games-are-coming/index.html",
     "https://www.eurogamer.net/senior-ea-exec-laura-miele-thinks-ai-has-led-to-a-real-rise-of-creativity-among-the-publishers-studios",
     "https://wccftech.com/finding-fun-human-work-ai-gaming-renaissance-dev/"
-  ],
-  "2026-06-29": [
-    "https://www.gamesindustry.biz/epics-sweeney-claims-steam-ai-labels-are-really-irresponsible-of-valve",
-    "https://www.tweaktown.com/news/112315/cd-projekt-red-ceo-warns-that-ai-generated-games-are-coming/index.html",
-    "https://www.eurogamer.net/senior-ea-exec-laura-miele-thinks-ai-has-led-to-a-real-rise-of-creativity-among-the-publishers-studios",
-    "https://wccftech.com/finding-fun-human-work-ai-gaming-renaissance-dev/",
-    "https://inkration.com/ai-art-tools-for-game-studios-in-2026-what-actually-works-for-production/"
-  ],
-  "2026-06-30": [
-    "https://www.digitaltrends.com/gaming/ai-and-vibe-coding-are-making-more-games-but-not-necessarily-better-ones/",
-    "https://phaser.io/news/2026/06/phaser-game-agent",
-    "https://www.criticalhit.net/gaming/how-ai-3d-tools-are-changing-the-way-indie-games-prototype-characters-and-props",
-    "https://www.mindstudio.ai/blog/what-is-seed-audio-1-bytedance-ai-video-workflows"
-  ],
-  "2026-07-01": [
-    "https://www.digitaltrends.com/gaming/ai-and-vibe-coding-are-making-more-games-but-not-necessarily-better-ones/",
-    "https://phaser.io/news/2026/06/phaser-game-agent",
-    "https://www.criticalhit.net/gaming/how-ai-3d-tools-are-changing-the-way-indie-games-prototype-characters-and-props",
-    "https://www.mindstudio.ai/blog/what-is-seed-audio-1-bytedance-ai-video-workflows"
   ],
   "2026-07-02": [
     "https://keyholesoftware.com/vibe-coding-trends-2026/",
@@ -97,7 +409,7 @@
     "https://www.criticalhit.net/gaming/how-ai-3d-tools-are-changing-the-way-indie-games-prototype-characters-and-props"
   ],
   "2026-07-04": [
-    "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
+    "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket",
     "https://www.gamesindustry.biz/godot-bans-autonomous-ai-agent-use-or-vibe-coded-contributions",
     "https://www.prismnews.com/hobbies/mobile-gaming/ai-tools-fuel-surge-in-mobile-game-launches-worldwide",
     "https://www.digitalcitizen.life/ea-says-ai-is-helping-developers-spend-more-time-on-creative-work/"
@@ -108,19 +420,13 @@
     "https://medium.com/no-time/this-youtuber-literally-asked-claude-fable-5-to-build-gta-6-f8444baf3824"
   ],
   "2026-07-06": [
-    "https://www.tekedia.com/sony-says-ai-will-shape-the-future-of-playstation-as-the-gaming-industry-embraces-the-next-development-phase/",
-    "https://www.buildfastwithai.com/blogs/claude-fable-5-returns-july-2026-what-changed",
-    "https://medium.com/no-time/this-youtuber-literally-asked-claude-fable-5-to-build-gta-6-f8444baf3824"
+    "https://www.buildfastwithai.com/blogs/claude-fable-5-returns-july-2026-what-changed"
   ],
   "2026-07-07": [
     "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
-    "https://www.theregister.com/ai-and-ml/2026/07/01/godot-says-bye-bye-ai-bans-vibe-coded-contributions/5265344",
-    "https://www.tweaktown.com/news/112457/sony-declares-ai-as-core-part-of-future-game-development-at-playstation/index.html",
-    "https://insider-gaming.com/new-research-details-ais-negative-impact-on-game-developers/"
+    "https://www.tweaktown.com/news/112457/sony-declares-ai-as-core-part-of-future-game-development-at-playstation/index.html"
   ],
   "2026-07-08": [
-    "https://www.gamesindustry.biz/godot-bans-autonomous-ai-agent-use-or-vibe-coded-contributions",
-    "https://www.tekedia.com/sony-says-ai-will-shape-the-future-of-playstation-as-the-gaming-industry-embraces-the-next-development-phase/",
     "https://theaiinsider.tech/2026/07/03/meta-launches-ai-gaming-app-pocket-while-zuckerberg-admits-agent-development-has-fallen-behind-expectations/",
     "https://www.indiehackers.com/post/ai-tools-indie-developers-are-using-to-cut-3d-asset-costs-in-2026-NjsZuCix0iKAJeG66OXi"
   ],
@@ -132,13 +438,6 @@
   ],
   "2026-07-10": [
     "https://www.basenor.com/blogs/news/5-things-to-know-about-groks-gaming-ambitions",
-    "https://www.gamesindustry.biz/sony-leadership-says-ai-tools-are-an-important-foundational-technology-supporting-our-strategy",
-    "https://theaiinsider.tech/2026/07/03/meta-launches-ai-gaming-app-pocket-while-zuckerberg-admits-agent-development-has-fallen-behind-expectations/",
     "https://www.opensourceforu.com/2026/07/godot-engine-bans-vibe-coding-to-protect-maintainers-from-ai-slop/"
-  ],
-  "2026-07-11": [
-    "https://www.basenor.com/blogs/news/5-things-to-know-about-groks-gaming-ambitions",
-    "https://www.opensourceforu.com/2026/07/godot-engine-bans-vibe-coding-to-protect-maintainers-from-ai-slop/",
-    "https://www.prismnews.com/hobbies/mobile-gaming/ai-tools-fuel-surge-in-mobile-game-launches-worldwide"
   ]
 }

@@ -21,6 +21,7 @@ from pathlib import Path
 REPO_DIR = Path("/root/.openclaw/workspace/ai-game-tools-daily")
 LOG_FILE = Path("/root/.openclaw/workspace/logs/ai-game-tools-daily.log")
 USED_URLS_FILE = REPO_DIR / "_data" / "used_urls.json"
+USED_URLS_FILE_ROOT = REPO_DIR / "used_urls.json"
 
 # API Keys
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -119,30 +120,51 @@ def search_articles():
     
     return articles
 
-def load_used_urls(days=30):
-    """加载已使用的URL"""
-    if not USED_URLS_FILE.exists():
-        return {}
-    try:
-        with open(USED_URLS_FILE, 'r') as f:
-            data = json.load(f)
-        cutoff = (datetime.now() - timedelta(days=days)).strftime('%Y-%m-%d')
-        return {k: v for k, v in data.items() if k >= cutoff}
-    except:
-        return {}
+def load_used_urls(days=365):
+    """加载已使用的URL - 加载所有历史数据防止重复"""
+    # 优先从根目录加载（兼容旧路径）
+    if USED_URLS_FILE_ROOT.exists():
+        try:
+            with open(USED_URLS_FILE_ROOT, 'r') as f:
+                data = json.load(f)
+            # 如果是旧格式（按日期分组的dict）
+            if isinstance(data, dict):
+                return data
+            # 如果是新格式（简单列表）
+            elif isinstance(data, list):
+                return {"all": data}
+        except:
+            pass
+    
+    if USED_URLS_FILE.exists():
+        try:
+            with open(USED_URLS_FILE, 'r') as f:
+                data = json.load(f)
+            if isinstance(data, dict):
+                return data
+            elif isinstance(data, list):
+                return {"all": data}
+        except:
+            pass
+    
+    return {}
 
 def save_used_urls(data):
-    """保存已使用的URL"""
+    """保存已使用的URL到两个位置"""
     USED_URLS_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(USED_URLS_FILE, 'w') as f:
         json.dump(data, f, indent=2)
+    with open(USED_URLS_FILE_ROOT, 'w') as f:
+        json.dump(data, f, indent=2)
+    log(f"used_urls.json 已更新，共 {sum(len(v) for v in data.values())} 个URL")
 
-def filter_duplicates(articles, days=30):
-    """过滤重复文章"""
+def filter_duplicates(articles, days=365):
+    """过滤重复文章 - 检查所有历史URL"""
     used_data = load_used_urls(days)
     used_urls = set()
     for urls in used_data.values():
-        used_urls.update(urls)
+        if isinstance(urls, list):
+            used_urls.update(urls)
     
     filtered = []
     for art in articles:

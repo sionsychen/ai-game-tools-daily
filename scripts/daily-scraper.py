@@ -41,8 +41,136 @@ SEARCH_QUERIES = [
     "Stable Diffusion game textures",
 ]
 
+# 语义查重配置
+SEMANTIC_THRESHOLD = 0.55  # 相似度阈值（针对事件签名优化）
+SEMANTIC_HISTORY_DAYS = 30   # 历史数据天数
+SEMANTIC_FINGERPRINTS_FILE = REPO_DIR / "_data" / "semantic_fingerprints.json"
+
+# 领域关键词库（用于事件签名提取）
+DOMAIN_KEYWORDS = {
+    'engines': ['godot', 'unity', 'unreal', 'cryengine', 'source'],
+    'ai_terms': ['ai', 'artificial', 'intelligence', 'generative', 'llm'],
+    'code_terms': ['code', 'coding', 'programming', 'script', 'repository', 'commit', 'submission', 'contribution'],
+    'actions': ['ban', 'bans', 'prohibit', 'prohibits', 'block', 'blocks', 'allow', 'allows', 'release', 'releases']
+}
+STOPWORDS = {'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 
+             'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will',
+             'would', 'could', 'should', 'may', 'might', 'must', 'shall',
+             'can', 'need', 'dare', 'ought', 'used', 'to', 'of', 'in', 'for',
+             'on', 'with', 'at', 'by', 'from', 'as', 'into', 'through', 'during',
+             'before', 'after', 'above', 'below', 'between', 'under', 'again',
+             'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why',
+             'how', 'all', 'each', 'few', 'more', 'most', 'other', 'some', 'such',
+             'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very',
+             'just', 'and', 'but', 'if', 'or', 'because', 'until', 'while', 'this',
+             'that', 'these', 'those', 'i', 'me', 'my', 'myself', 'we', 'our',
+             'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves',
+             'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it',
+             'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves'}
+
+def semantic_fingerprint(text):
+    """提取事件签名：引擎 + AI + 代码 + 动作"""
+    text = text.lower()
+    words = set(re.findall(r'\b\w+\b', text))
+    
+    signature = []
+    for category, keywords in DOMAIN_KEYWORDS.items():
+        matches = [w for w in keywords if w in words]
+        if matches:
+            signature.extend(matches)
+    
+    return ' '.join(sorted(set(signature)))
+
+def similarity_score(fp1, fp2):
+    """计算加权Jaccard相似度：引擎x3 + AIx2 + 其他x1"""
+    set1 = set(fp1.split())
+    set2 = set(fp2.split())
+    
+    # 分类特征
+    engines1 = set1 & {'godot', 'unity', 'unreal', 'cryengine', 'source'}
+    engines2 = set2 & {'godot', 'unity', 'unreal', 'cryengine', 'source'}
+    ai1 = set1 & {'ai', 'artificial', 'intelligence', 'generative', 'llm'}
+    ai2 = set2 & {'ai', 'artificial', 'intelligence', 'generative', 'llm'}
+    other1 = set1 - engines1 - ai1
+    other2 = set2 - engines2 - ai2
+    
+    # 加权匹配
+    engine_match = len(engines1 & engines2) * 3
+    ai_match = len(ai1 & ai2) * 2
+    other_match = len(other1 & other2)
+    
+    weighted_intersection = engine_match + ai_match + other_match
+    
+    # 并集
+    all_engines = engines1 | engines2
+    all_ai = ai1 | ai2
+    all_other = other1 | other2
+    weighted_union = len(all_engines) * 3 + len(all_ai) * 2 + len(all_other)
+    
+    return weighted_intersection / weighted_union if weighted_union > 0 else 0.0
+
+def load_semantic_fingerprints():
+    """加载历史语义指纹（30天内）"""
+    if not SEMANTIC_FINGERPRINTS_FILE.exists():
+        return []
+    
+    try:
+        with open(SEMANTIC_FINGERPRINTS_FILE, 'r') as f:
+            data = json.load(f)
+        
+        cutoff = (datetime.now() - timedelta(days=SEMANTIC_HISTORY_DAYS)).strftime('%Y-%m-%d')
+        
+        fingerprints = []
+        for date_str, fps in data.items():
+            if date_str >= cutoff and isinstance(fps, list):
+                fingerprints.extend(fps)
+        
+        return fingerprints
+    except:
+        return []
+
+def save_semantic_fingerprint(fingerprint, date_str):
+    """保存语义指纹"""
+    SEMANTIC_FINGERPRINTS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    
+    data = {}
+    if SEMANTIC_FINGERPRINTS_FILE.exists():
+        try:
+            with open(SEMANTIC_FINGERPRINTS_FILE, 'r') as f:
+                data = json.load(f)
+        except:
+            pass
+    
+    if date_str not in data:
+        data[date_str] = []
+    
+    data[date_str].append(fingerprint)
+    
+    with open(SEMANTIC_FINGERPRINTS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def semantic_filter(articles, threshold=SEMANTIC_THRESHOLD):
+    """语义去重：与30天内历史文章比较"""
+    history_fingerprints = load_semantic_fingerprints()
+    
+    filtered = []
+    for art in articles:
+        fp = semantic_fingerprint(art['title'] + ' ' + art.get('desc', ''))
+        
+        is_duplicate = False
+        for hist_fp in history_fingerprints:
+            if similarity_score(fp, hist_fp) >= threshold:
+                log(f"语义去重: '{art['title'][:50]}...' 与历史文章相似度超过{threshold}")
+                is_duplicate = True
+                break
+        
+        if not is_duplicate:
+            filtered.append(art)
+            history_fingerprints.append(fp)
+    
+    return filtered
+
 # 分类关键词
-CATEGORY_KEYWORDS = {
     "ai-art": ["art", "image", "texture", "concept", "sprite", "midjourney", "stable diffusion", "dalle"],
     "ai-code": ["code", "script", "programming", "copilot", "shader", "autocomplete"],
     "ai-audio": ["audio", "sound", "music", "voice", "sfx", "speech"],
@@ -293,6 +421,12 @@ def generate():
         log("所有文章已发布过", "WARN")
         return False
     
+    # 语义去重（30天历史，阈值0.65）
+    articles = semantic_filter(articles)
+    if not articles:
+        log("所有文章通过语义查重已发布过", "WARN")
+        return False
+    
     # 限制为最多5篇
     articles = articles[:5]
     
@@ -366,7 +500,12 @@ articles:
         f.write(content)
     log("文件已保存")
     
-    # 记录已使用URL
+    # 记录语义指纹
+    for art in articles[:5]:
+        fp = semantic_fingerprint(art['title'] + ' ' + art.get('desc', ''))
+        save_semantic_fingerprint(fp, date_str)
+    
+    log(f"已保存 {len(articles[:5])} 个语义指纹")
     used_data = load_used_urls()
     used_data[date_str] = used_urls_today
     save_used_urls(used_data)
